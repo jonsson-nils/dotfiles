@@ -2,6 +2,8 @@
 
 DOTFILES_HOME="$(dirname $0 | xargs realpath)"
 
+echo "$DOTFILES_HOME"
+
 install_zsh_config() {
   echo "Installing ZSH configuration."
 
@@ -17,15 +19,25 @@ install_zsh_config() {
   ln -sf "$DOTFILES_HOME/src/zsh/"* "$HOME/.zsh-configuration/configuration/"
 }
 
-install_docker_config() {
-  echo "Installing Docker configuration."
+install_tabnine_config() {
+  if [ ! -s "$HOME/.config/TabNine" ]; then
+    echo "Installing TabNine configuration."
 
-  if [ ! -d "$HOME/.docker/" ]; then
-    mkdir -p "$HOME/.docker"
+    rm -rf "$HOME/.config/TabNine" && \
+    mkdir -p "$HOME/.config" && \
+    ln -sf "$DOTFILES_HOME/src/TabNine" "$HOME/.config/TabNine"
   fi
-
-  cp -R "$DOTFILES_HOME/src/docker/config.json" "$HOME/.docker/config.json"
 }
 
+install_docker_config() {
+  if [ ! -d "$HOME/.docker/" ]; then
+    echo "Installing Docker configuration."
+
+    mkdir -p "$HOME/.docker" && \
+    cp -R "$DOTFILES_HOME/src/docker/config.json" "$HOME/.docker/config.json"
+  fi
+}
+
+install_tabnine_config
+# install_docker_config
 install_zsh_config
-install_docker_config
