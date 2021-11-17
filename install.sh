@@ -7,9 +7,8 @@ echo "$DOTFILES_HOME"
 install_zsh_config() {
   echo "Installing ZSH configuration."
 
-  if [ ! -d "$HOME/.zsh-configuration/configuration" ]; then
-    mkdir -p "$HOME/.zsh-configuration/configuration"
-  fi
+  mkdir -p "$HOME/.zsh-configuration/configuration"
+
   if [ ! -f "$HOME/.zsh-configuration/apply.zsh" ]; then
     ln -sf "$DOTFILES_HOME/src/zshrc" "$HOME/.zsh-configuration/apply.zsh"
     echo "source ~/.zsh-configuration/apply.zsh" >> "$HOME/.zshrc"
