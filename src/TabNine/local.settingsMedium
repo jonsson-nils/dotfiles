@@ -21,7 +21,7 @@
     "run": {
       "is_enabled": true,
       "line_suggestions": true,
-      "omit_prefix_suggestions": true
+      "omit_prefix_suggestions": false
     },
     "tune": {
       "enable_power_saving_mode": false,
