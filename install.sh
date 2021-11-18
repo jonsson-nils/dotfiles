@@ -7,15 +7,7 @@ echo "$DOTFILES_HOME"
 install_zsh_config() {
   echo "Installing ZSH configuration."
 
-  mkdir -p "$HOME/.zsh-configuration/configuration"
-
-  if [ ! -f "$HOME/.zsh-configuration/apply.zsh" ]; then
-    ln -sf "$DOTFILES_HOME/src/zshrc" "$HOME/.zsh-configuration/apply.zsh"
-    echo "source ~/.zsh-configuration/apply.zsh" >> "$HOME/.zshrc"
-  fi
-
-  echo "export DOTFILES_HOME=\"$DOTFILES_HOME\"" >>"$HOME/.zsh-configuration/configuration/000_dotfiles_home.zsh"
-  ln -sf "$DOTFILES_HOME/src/zsh/"* "$HOME/.zsh-configuration/configuration/"
+  ln -sf "$DOTFILES_HOME/src/zsh/"* "$HOME/.oh-my-zsh/custom/"
 }
 
 install_tabnine_config() {
