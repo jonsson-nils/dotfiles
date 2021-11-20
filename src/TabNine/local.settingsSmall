@@ -20,8 +20,8 @@
     },
     "run": {
       "is_enabled": true,
-      "line_suggestions": false,
-      "omit_prefix_suggestions": false
+      "line_suggestions": true,
+      "omit_prefix_suggestions": true
     },
     "tune": {
       "enable_power_saving_mode": false,
