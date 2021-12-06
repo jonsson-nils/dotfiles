@@ -29,6 +29,6 @@ install_docker_config() {
   fi
 }
 
-install_tabnine_config
+# install_tabnine_config
 # install_docker_config
 install_zsh_config
