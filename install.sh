@@ -7,7 +7,7 @@ echo "$DOTFILES_HOME"
 # Installing ZSH configuration
 ln -sf "$DOTFILES_HOME/zsh/"* "$HOME/.oh-my-zsh/custom/"
 
-  ln -sf "$DOTFILES_HOME/src/zsh/"* "$HOME/.oh-my-zsh/custom/"
-}
-
-install_zsh_config
+# Installing PWSH configuration
+pwsh install.ps1
+mkdir -p "$HOME"/.config/powershell
+ln -sf "$DOTFILES_HOME"/.dotfiles/pwsh/profile.ps1 "$HOME"/.config/powershell/profile.ps1
