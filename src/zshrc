@@ -1,3 +1,0 @@
-for configuration ($HOME/.zsh-configuration/configuration/*(N)); do
-  source "$configuration"
-done
