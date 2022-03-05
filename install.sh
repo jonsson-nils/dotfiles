@@ -8,10 +8,12 @@ echo "$DOTFILES_HOME"
 ln -sf "$DOTFILES_HOME/zsh/"* "$HOME/.oh-my-zsh/custom/"
 
 # Installing PWSH configuration
-pwsh install.ps1
+pwsh "$DOTFILES_HOME"/pwsh/install.ps1
 mkdir -p "$HOME"/.config/powershell
-cp "$DOTFILES_HOME"/.dotfiles/pwsh/profile.ps1 "$HOME"/.config/powershell/profile.ps1
+ln -sf "$DOTFILES_HOME"/pwsh/profile.ps1 "$HOME"/.config/powershell/profile.ps1
 
 # Configure Git
+git config --global user.name "Nils Jonsson"
+git config --global user.email "nils.jonsson@jonsson-analytics.com"
 git config --global core.editor "code"
 git config --global pull.ff only
