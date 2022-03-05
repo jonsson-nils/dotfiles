@@ -4,8 +4,8 @@ DOTFILES_HOME="$(dirname $0 | xargs realpath)"
 
 echo "$DOTFILES_HOME"
 
-install_zsh_config() {
-  echo "Installing ZSH configuration."
+# Installing ZSH configuration
+ln -sf "$DOTFILES_HOME/zsh/"* "$HOME/.oh-my-zsh/custom/"
 
   ln -sf "$DOTFILES_HOME/src/zsh/"* "$HOME/.oh-my-zsh/custom/"
 }
