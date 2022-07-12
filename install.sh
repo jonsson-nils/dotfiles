@@ -11,7 +11,7 @@ echo "$DOTFILES_HOME"
 ln -sf "$DOTFILES_HOME/zsh/"* "$HOME/.oh-my-zsh/custom/"
 
 # Installing PWSH configuration
-mkdir -p ~/.omp/themes
+mkdir -p ~/.omp
 ln -sf "$DOTFILES_HOME"/pwsh/themes ~/.omp/
 pwsh "$DOTFILES_HOME"/pwsh/install.ps1
 mkdir -p "$HOME"/.config/powershell
