@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+set -x
+set -e
+
 DOTFILES_HOME="$(dirname $0 | xargs realpath)"
 
 echo "$DOTFILES_HOME"
