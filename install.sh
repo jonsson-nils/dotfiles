@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-set -x
-set -e
+set -ex
 
 DOTFILES_HOME="$(dirname $0 | xargs realpath)"
 
@@ -11,11 +10,13 @@ echo "$DOTFILES_HOME"
 ln -sf "$DOTFILES_HOME/zsh/"* "$HOME/.oh-my-zsh/custom/"
 
 # Installing PWSH configuration
-mkdir -p ~/.omp
-ln -sf "$DOTFILES_HOME"/pwsh/themes ~/.omp/
-pwsh "$DOTFILES_HOME"/pwsh/install.ps1
-mkdir -p "$HOME"/.config/powershell
-ln -sf "$DOTFILES_HOME"/pwsh/profile.ps1 "$HOME"/.config/powershell/profile.ps1
+if which pwsh > /dev/null; then
+  mkdir -p ~/.omp
+  ln -sf "$DOTFILES_HOME"/pwsh/themes ~/.omp/
+  pwsh "$DOTFILES_HOME"/pwsh/install.ps1
+  mkdir -p "$HOME"/.config/powershell
+  ln -sf "$DOTFILES_HOME"/pwsh/profile.ps1 "$HOME"/.config/powershell/profile.ps1
+fi
 
 # Configure Git
 git config --global user.name "Nils Jonsson"
