@@ -549,6 +549,13 @@ let-env config = {
   ]
   keybindings: [
     {
+      # Don't exit *Nushell* on `Ctrl + D`
+      modifier: control
+      keycode: char_d
+      mode: [emacs, vi_normal, vi_insert]
+      event: null
+    }
+    {
       name: completion_menu
       modifier: none
       keycode: tab
