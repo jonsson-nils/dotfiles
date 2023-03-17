@@ -7,6 +7,13 @@ sudo apt-get install -y curl xz-utils
 
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
+echo >> ~/.profile <<-EOF
+if [ -e /home/jonsson-nils/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jonsson-nils/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+EOF
+
+source ~/.profile
+
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 
