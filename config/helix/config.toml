@@ -1,4 +1,4 @@
-theme = "onedarker"
+theme = "nord"
 
 [editor]
 bufferline = "multiple"
