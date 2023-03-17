@@ -27,10 +27,16 @@
   };
 
   home.packages = with pkgs; [
+    # vcs
     gh
     git
+
+    # editors
     helix
+
+    # shell
     nushell
+    starship
     zellij
   ];
 }
