@@ -30,14 +30,38 @@
     # vcs
     gh
     git
+    gitui
+    delta
 
     # editors
     helix
 
+    # dev environment
+    sccache
+    tokei
+    hyperfine
+   
     # shell
     nushell
     starship
     zellij
-  ];
+    mprocs
+    broot
+
+    # cli essentials
+    coreutils-full
+    exa
+    bat
+    ripgrep
+    fd
+    sd
+
+    # monitoring
+    bottom
+    du-dust
+    bandwhich
+    speedtest-cli
+    procs
+ ];
 }
 
