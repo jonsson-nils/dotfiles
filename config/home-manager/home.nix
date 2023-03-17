@@ -19,13 +19,19 @@
   };
 
   home.file = {
-    ".gitconfig".source = ~/projects/dotfiles/.gitconfig;
+    ".gitconfig".source                = ~/projects/dotfiles/.gitconfig;
+    ".config/helix/config.toml".source = ~/projects/dotfiles/config/helix/config.toml;
+    ".config/zellij/config.kdl".source = ~/projects/dotfiles/config/zellij/config.kdl;
+    ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
+    ".config/nushell/env.nu".source    = ~/projects/dotfiles/config/nushell/env.nu;
   };
 
   home.packages = with pkgs; [
     gh
     git
     helix
+    nushell
+    zellij
   ];
 }
 
