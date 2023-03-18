@@ -1,5 +1,19 @@
 # Nushell Environment Config File
 
+# bash env compat
+
+load-env (bash -c '
+if [ -e /home/jonsson-nils/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jonsson-nils/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+printenv
+' |
+ split row "\n" |
+ each { split row '=' } |
+ each { |it| { $"($it.0)": $"($it.1)" } } |
+ reduce { |it,acc| $acc | merge $it } |
+ rename -c [PWD pwd]
+)
+
 def create_left_prompt [] {
     let path_segment = if (is-admin) {
         $"(ansi red_bold)($env.PWD)"
