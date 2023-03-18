@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
       {'rafamadriz/friendly-snippets'}, -- Optional
     }
   }
+  use('LhKipp/nvim-nu', {run = ':TSInstall nu'})
 
   if packer_bootstrap then
     require('packer').sync()
