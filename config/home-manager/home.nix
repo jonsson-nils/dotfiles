@@ -44,6 +44,10 @@
     tokei
     hyperfine
 
+    # Rust compiler
+    cargo
+    rustc
+
     # C compiler
     pkgconfig
     cmake
