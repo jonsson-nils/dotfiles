@@ -79,8 +79,8 @@ let-env NU_PLUGIN_DIRS = [
 
 load-env {
   SHELL:  (which nu | get 0 | get path)
-  EDITOR: (which hx | get 0 | get path)
-  VISUAL: (which hx | get 0 | get path)
+  EDITOR: (which nvim | get 0 | get path)
+  VISUAL: (which nvim | get 0 | get path)
 }
 
 mkdir ~/.cache/starship

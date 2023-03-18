@@ -12,12 +12,6 @@
     gpg.enable = true;
   };
 
-  home.sessionVariables = {
-    DISPLAY = ":0";
-    EDITOR = "hx";
-    VISUAL = "hx";
-  };
-
   home.file = {
     ".gitconfig".source                = ~/projects/dotfiles/.gitconfig;
     ".config/helix/config.toml".source = ~/projects/dotfiles/config/helix/config.toml;
@@ -35,6 +29,7 @@
 
     # editors
     helix
+    # neovim
 
     # dev environment
     sccache
