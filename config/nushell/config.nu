@@ -658,4 +658,8 @@ let-env config = {
   ]
 }
 
+alias vim = nvim
+alias vi = nvim
+
 source ~/.cache/starship/init.nu
+
