@@ -53,6 +53,10 @@
     cmake
     gcc
 
+    # go compiler
+    go
+    libcap
+
     # shell
     nushell
     starship
