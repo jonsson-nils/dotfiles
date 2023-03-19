@@ -48,13 +48,13 @@
     nodejs
 
     # Rust compiler
-    cargo
     rustc
+    cargo
 
     # C compiler
+    gcc
     pkgconfig
     cmake
-    gcc
 
     # go compiler
     go
