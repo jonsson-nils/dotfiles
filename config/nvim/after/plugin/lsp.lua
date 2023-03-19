@@ -14,6 +14,7 @@ lsp.ensure_installed({
   'sqlls',
   'yamlls',
   'terraformls',
+  'texlab',
 })
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
