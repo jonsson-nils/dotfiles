@@ -7,6 +7,8 @@ lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
   'nil_ls',
+  'dockerls',
+  'docker_compose_language_service',
 })
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
