@@ -13,6 +13,7 @@ lsp.ensure_installed({
   'marksman',
   'sqlls',
   'yamlls',
+  'terraformls',
 })
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
