@@ -68,7 +68,7 @@ vim.keymap.set("n", "<leader>wh", "<C-w>h")
 vim.keymap.set("n", "<leader>wl", "<C-w>l")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+  vim.cmd("so")
 end)
 
 local ensure_packer = function()
@@ -127,4 +127,3 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
-
