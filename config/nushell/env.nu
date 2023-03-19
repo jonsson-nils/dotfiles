@@ -81,6 +81,7 @@ load-env {
   SHELL:  (which nu | get 0 | get path)
   EDITOR: (which nvim | get 0 | get path)
   VISUAL: (which nvim | get 0 | get path)
+  RUSTC_WRAPPER: (which sccache | get 0 | get path)
 }
 
 mkdir ~/.cache/starship

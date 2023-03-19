@@ -48,8 +48,7 @@
     nodejs
 
     # Rust compiler
-    rustc
-    cargo
+    rustup
 
     # C compiler
     gcc
