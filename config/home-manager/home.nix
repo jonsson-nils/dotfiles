@@ -44,6 +44,9 @@
     tokei
     hyperfine
 
+    # node
+    nodejs
+
     # Rust compiler
     cargo
     rustc
