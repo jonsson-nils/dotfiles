@@ -67,6 +67,8 @@
     broot
 
     # cli essentials
+    zip
+    unzip
     coreutils-full
     exa
     bat
