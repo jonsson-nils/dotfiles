@@ -12,6 +12,7 @@ lsp.ensure_installed({
   'jsonls',
   'marksman',
   'sqlls',
+  'yamlls',
 })
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
