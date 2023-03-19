@@ -11,6 +11,7 @@ lsp.ensure_installed({
   'docker_compose_language_service',
   'jsonls',
   'marksman',
+  'sqlls',
 })
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
