@@ -23,9 +23,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
 })
--- lsp.set_preferences({
---   sign_icons = { }
--- })
+lsp.set_preferences({
+  sign_icons = { }
+})
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
