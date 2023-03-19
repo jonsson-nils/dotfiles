@@ -113,6 +113,10 @@ return require('packer').startup(function(use)
   use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' })
   use('airblade/vim-gitgutter')
   use('github/copilot.vim')
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
