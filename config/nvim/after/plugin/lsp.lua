@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'nil_ls',
   'dockerls',
   'docker_compose_language_service',
+  'jsonls',
 })
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
