@@ -68,6 +68,9 @@
     mprocs
     broot
 
+    # latex
+    texlive.combined.scheme-full
+
     # cli essentials
     zip
     unzip
