@@ -76,6 +76,7 @@ let-env NU_PLUGIN_DIRS = [
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
 let-env PATH = ($env.PATH | append ~/.cargo/bin)
+let-env PATH = ($env.PATH | append ~/.local/bin)
 
 load-env {
   SHELL:  (which nu | get 0 | get path)
