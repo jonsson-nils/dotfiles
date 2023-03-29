@@ -660,6 +660,8 @@ let-env config = {
 
 alias vim = nvim
 alias vi = nvim
+alias tree = exa -T
+alias cat = bat
 
 source ~/.cache/starship/init.nu
 
