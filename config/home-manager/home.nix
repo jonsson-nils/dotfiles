@@ -65,6 +65,7 @@
     libcap
 
     # shell
+    openssh
     nushell
     starship
     zellij
