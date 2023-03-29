@@ -14,6 +14,7 @@
 
   home.file = {
     ".gitconfig".source                               = ~/projects/dotfiles/.gitconfig;
+    ".cargo/config.toml".source                       = ~/projects/dotfiles/cargo/config.toml;
     ".config/helix/config.toml".source                = ~/projects/dotfiles/config/helix/config.toml;
     ".config/zellij/config.kdl".source                = ~/projects/dotfiles/config/zellij/config.kdl;
     ".config/nushell/config.nu".source                = ~/projects/dotfiles/config/nushell/config.nu;
@@ -46,6 +47,7 @@
     sccache
     tokei
     hyperfine
+    mold
 
     # node
     nodejs
@@ -54,7 +56,7 @@
     rustup
 
     # C compiler
-    gcc
+    clang
     pkgconfig
     cmake
 
