@@ -1,4 +1,4 @@
-theme = "nord"
+theme = "ayu_dark"
 
 [editor]
 bufferline = "multiple"
