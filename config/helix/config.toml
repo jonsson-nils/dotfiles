@@ -6,9 +6,15 @@ true-color = true
 line-number = "relative"
 cursorline = true
 gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
-
+auto-save = true
+auto-format = true
+color-modes = true
+ 
 [editor.lsp]
 display-messages = true
+
+[editor.indent-guides]
+render = true
 
 [editor.statusline]
 left = ["mode", "spinner"]
