@@ -49,6 +49,10 @@
     tokei
     hyperfine
     mold
+    jq
+    oha
+    openssl
+    openssl.dev
 
     # node
     nodejs
