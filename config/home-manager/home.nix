@@ -24,7 +24,7 @@
     ".config/nvim/after/plugin/harpoon.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/harpoon.lua;
     ".config/nvim/after/plugin/lsp.lua".source        = ~/projects/dotfiles/config/nvim/after/plugin/lsp.lua;
     ".config/nvim/after/plugin/lualine.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/lualine.lua;
-    ".config/nvim/after/plugin/nord.lua".source       = ~/projects/dotfiles/config/nvim/after/plugin/nord.lua;
+    ".config/nvim/after/plugin/tokyonight.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/tokyonight.lua;
     ".config/nvim/after/plugin/telescope.lua".source  = ~/projects/dotfiles/config/nvim/after/plugin/telescope.lua;
     ".config/nvim/after/plugin/treesitter.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/treesitter.lua;
     ".config/nvim/after/plugin/undotree.lua".source   = ~/projects/dotfiles/config/nvim/after/plugin/undotree.lua;
