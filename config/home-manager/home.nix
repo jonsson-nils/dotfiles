@@ -19,6 +19,7 @@
     ".config/zellij/config.kdl".source                = ~/projects/dotfiles/config/zellij/config.kdl;
     ".config/nushell/config.nu".source                = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source                   = ~/projects/dotfiles/config/nushell/env.nu;
+    ".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
     ".config/nvim/after/plugin/fugitive.lua".source   = ~/projects/dotfiles/config/nvim/after/plugin/fugitive.lua;
     ".config/nvim/after/plugin/git-gutter.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/git-gutter.lua;
     ".config/nvim/after/plugin/harpoon.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/harpoon.lua;
