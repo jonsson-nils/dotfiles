@@ -87,6 +87,11 @@ load-env {
   RUSTC_WRAPPER: (which sccache | get 0 | get path)
 }
 
+def docker-load [name: string, tag: string] {
+  docker tag $"($name):(cat result | docker load | split row ':' | get 2)" $"($name):($tag)"
+}
+
+
 mkdir ~/.cache/starship
 mkdir ~/.config
 starship init nu | save -f ~/.cache/starship/init.nu
