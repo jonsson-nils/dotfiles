@@ -172,6 +172,7 @@ return require('packer').startup(function(use)
   }
 
   use 'preservim/nerdcommenter'
+  use "lukas-reineke/indent-blankline.nvim"
 
   if packer_bootstrap then
     require('packer').sync()
