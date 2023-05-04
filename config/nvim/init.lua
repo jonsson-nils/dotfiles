@@ -80,9 +80,9 @@ vim.keymap.set("v", "gh", "0")
 vim.keymap.set("n", "ge", "G")
 vim.keymap.set("v", "ge", "G")
 
-vim.keymap.set("n", "<leader><leader>", function()
-  vim.cmd("so")
-end)
+--vim.keymap.set("n", "<leader><leader>", function()
+--  vim.cmd("so")
+--end)
 
 local ensure_packer = function()
   local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'

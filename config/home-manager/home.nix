@@ -74,7 +74,7 @@
     rustup
 
     # C compiler
-    clang
+    gcc
     pkgconfig
     cmake
 
