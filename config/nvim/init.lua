@@ -162,8 +162,6 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim',
       'kyazdani42/nvim-web-devicons',
     },
-    config = function ()
-    end
   }
 
   use 'f-person/git-blame.nvim'
