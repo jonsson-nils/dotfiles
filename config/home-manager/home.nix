@@ -14,12 +14,18 @@
 
   home.file = {
     ".gitconfig".source                               = ~/projects/dotfiles/.gitconfig;
+
     ".cargo/config.toml".source                       = ~/projects/dotfiles/cargo/config.toml;
+
     ".config/helix/config.toml".source                = ~/projects/dotfiles/config/helix/config.toml;
+
     ".config/zellij/config.kdl".source                = ~/projects/dotfiles/config/zellij/config.kdl;
+
     ".config/nushell/config.nu".source                = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source                   = ~/projects/dotfiles/config/nushell/env.nu;
+
     ".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
+    ".config/nvim/after/plugin/gh.lua".source         = ~/projects/dotfiles/config/nvim/after/plugin/gh.lua;
     ".config/nvim/after/plugin/orgmode.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/orgmode.lua;
     ".config/nvim/after/plugin/copilot.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/copilot.lua;
     ".config/nvim/after/plugin/neotree.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/neotree.lua;
@@ -35,6 +41,7 @@
     ".config/nvim/after/plugin/treesitter.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/treesitter.lua;
     ".config/nvim/after/plugin/undotree.lua".source   = ~/projects/dotfiles/config/nvim/after/plugin/undotree.lua;
     ".config/nvim/init.lua".source                    = ~/projects/dotfiles/config/nvim/init.lua;
+
     ".local/bin/update-rust-analyzer".source          = ~/projects/dotfiles/local/bin/update-rust-analyzer;
   };
 
