@@ -148,16 +148,15 @@ return require('packer').startup(function(use)
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-    },
-    config = function()
-
-    end
+    }
   }
 
   use {
     'ldelossa/gh.nvim',
     requires = { { 'ldelossa/litee.nvim' } }
   }
+
+  use {"folke/which-key.nvim"}
 
   if packer_bootstrap then
     require('packer').sync()
