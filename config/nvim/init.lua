@@ -171,6 +171,8 @@ return require('packer').startup(function(use)
     branch = 'v2',
   }
 
+  use 'preservim/nerdcommenter'
+
   if packer_bootstrap then
     require('packer').sync()
   end
