@@ -25,6 +25,7 @@
     ".config/nushell/env.nu".source                   = ~/projects/dotfiles/config/nushell/env.nu;
 
     ".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
+    ".config/nvim/after/plugin/hop.lua".source        = ~/projects/dotfiles/config/nvim/after/plugin/hop.lua;
     ".config/nvim/after/plugin/which-key.lua".source  = ~/projects/dotfiles/config/nvim/after/plugin/which-key.lua;
     ".config/nvim/after/plugin/octo.lua".source       = ~/projects/dotfiles/config/nvim/after/plugin/octo.lua;
     ".config/nvim/after/plugin/orgmode.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/orgmode.lua;

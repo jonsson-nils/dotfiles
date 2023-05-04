@@ -166,6 +166,11 @@ return require('packer').startup(function(use)
 
   use 'f-person/git-blame.nvim'
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
