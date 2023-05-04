@@ -1,4 +1,5 @@
-
+local ft_to_parser = require "nvim-treesitter.parsers".filetype_to_parsername
+ft_to_parser.octo = "markdown"
 require 'nvim-treesitter.install'.compilers = { 'clang++' }
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = { "c", "lua", "vim", "rust", "help", "query", "javascript", "typescript" },

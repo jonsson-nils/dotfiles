@@ -151,12 +151,20 @@ return require('packer').startup(function(use)
     }
   }
 
-  use {
-    'ldelossa/gh.nvim',
-    requires = { { 'ldelossa/litee.nvim' } }
-  }
-
   use {"folke/which-key.nvim"}
+
+  use {'nvim-telescope/telescope-ui-select.nvim' }
+
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function ()
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()
