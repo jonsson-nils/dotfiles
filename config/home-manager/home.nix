@@ -20,6 +20,7 @@
     ".config/nushell/config.nu".source                = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source                   = ~/projects/dotfiles/config/nushell/env.nu;
     ".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
+    ".config/nvim/after/plugin/copilot.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/copilot.lua;
     ".config/nvim/after/plugin/neotree.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/neotree.lua;
     ".config/nvim/after/plugin/neogit.lua".source    = ~/projects/dotfiles/config/nvim/after/plugin/neogit.lua;
     ".config/nvim/after/plugin/fugitive.lua".source   = ~/projects/dotfiles/config/nvim/after/plugin/fugitive.lua;
