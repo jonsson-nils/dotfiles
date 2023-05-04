@@ -53,7 +53,11 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>cs", function() vim.lsp.buf.format() end)
+vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format() end)
+vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end)
+vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.implementation() end)
+vim.keymap.set("n", "<leader>gr", function() vim.lsp.buf.references() end)
+vim.keymap.set("n", "<leader>ch", function() vim.lsp.buf.hover() end)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
