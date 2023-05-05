@@ -55,10 +55,6 @@ return require('packer').startup(function(use)
   }
   use { 'LhKipp/nvim-nu', { run = ':TSInstall nu' } }
   use {
-    'TimUntersberger/neogit',
-    requires = 'nvim-lua/plenary.nvim'
-  }
-  use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
