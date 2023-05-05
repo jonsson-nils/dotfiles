@@ -27,9 +27,10 @@
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
 
     ".config/nvim/init.lua".source = ~/projects/dotfiles/config/nvim/init.lua;
-    ".config/nvim/lua/options/init.lua".source = ~/projects/dotfiles/config/nvim/lua/options/init.lua;
-    ".config/nvim/lua/keymaps/init.lua".source = ~/projects/dotfiles/config/nvim/lua/keymaps/init.lua;
-    ".config/nvim/lua/plugins/init.lua".source = ~/projects/dotfiles/config/nvim/lua/options/init.lua;
+    ".config/nvim/lua/user/init.lua".source = ~/projects/dotfiles/config/nvim/lua/user/init.lua;
+    ".config/nvim/lua/user/options.lua".source = ~/projects/dotfiles/config/nvim/lua/user/options.lua;
+    ".config/nvim/lua/user/keymaps.lua".source = ~/projects/dotfiles/config/nvim/lua/user/keymaps.lua;
+    ".config/nvim/lua/user/packer.lua".source = ~/projects/dotfiles/config/nvim/lua/user/packer.lua;
     ".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
     ".config/nvim/after/plugin/indent_blankline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/indent_blankline.lua;
     ".config/nvim/after/plugin/hop.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/hop.lua;
