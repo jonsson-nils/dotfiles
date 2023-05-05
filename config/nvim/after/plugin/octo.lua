@@ -35,4 +35,17 @@ require'octo'.setup({
   },
 })
 
+vim.keymap.set('n', '<leader>oil', '<cmd>Octo issue list<cr>')
+vim.keymap.set('n', '<leader>ois', '<cmd>Octo issue search<cr>')
+vim.keymap.set('n', '<leader>oic', '<cmd>Octo issue create<cr>')
+vim.keymap.set('n', '<leader>oix', '<cmd>Octo issue close<cr>')
+vim.keymap.set('n', '<leader>oir', '<cmd>Octo issue reopen<cr>')
+vim.keymap.set('n', '<leader>opl', '<cmd>Octo pr list<cr>')
+vim.keymap.set('n', '<leader>opc', '<cmd>Octo pr create<cr>')
+vim.keymap.set('n', '<leader>opx', '<cmd>Octo pr close<cr>')
+vim.keymap.set('n', '<leader>opr', '<cmd>Octo pr reopen<cr>')
+vim.keymap.set('n', '<leader>opm', '<cmd>Octo pr merge<cr>')
+vim.keymap.set('n', '<leader>opd', '<cmd>Octo pr diff<cr>')
+vim.keymap.set('n', '<leader>opb', '<cmd>Octo pr checkout<cr>')
+vim.keymap.set('n', '<leader>opv', '<cmd>Octo pr review<cr>')
 
