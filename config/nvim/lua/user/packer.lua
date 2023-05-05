@@ -11,15 +11,26 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use('wbthomason/packer.nvim')
-  use('folke/tokyonight.nvim')
-  use({ 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { { 'nvim-lua/plenary.nvim' } } })
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-  use('nvim-treesitter/playground')
-  use('theprimeagen/harpoon')
-  use('mbbill/undotree')
-  use('tpope/vim-fugitive')
-  use{'nvim-orgmode/orgmode'}
+  use 'wbthomason/packer.nvim'
+  use 'folke/tokyonight.nvim'
+  use 'preservim/nerdcommenter'
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'nvim-treesitter/playground'
+  use 'theprimeagen/harpoon'
+  use 'mbbill/undotree'
+  use 'tpope/vim-fugitive'
+  use 'lewis6991/gitsigns.nvim'
+  use 'github/copilot.vim'
+  use 'j-hui/fidget.nvim'
+  use 'folke/which-key.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
+  use 'nvim-orgmode/orgmode'
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+  use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
@@ -42,36 +53,29 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' }, -- Optional
     }
   }
-  use('LhKipp/nvim-nu', { run = ':TSInstall nu' })
-  use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' })
+  use { 'LhKipp/nvim-nu', { run = ':TSInstall nu' } }
   use {
-    'lewis6991/gitsigns.nvim',
-    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    'TimUntersberger/neogit',
+    requires = 'nvim-lua/plenary.nvim'
   }
-  use('github/copilot.vim')
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-
-  use('j-hui/fidget.nvim')
-
   use {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    'akinsho/bufferline.nvim',
+    tag = '*',
+    requires = 'nvim-tree/nvim-web-devicons',
+  }
+  use {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
     requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
     }
   }
-
-  use {"folke/which-key.nvim"}
-
-  use {'nvim-telescope/telescope-ui-select.nvim' }
-
   use {
     'pwntester/octo.nvim',
     requires = {
@@ -80,14 +84,10 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons',
     },
   }
-
   use {
     'phaazon/hop.nvim',
     branch = 'v2',
   }
-
-  use 'preservim/nerdcommenter'
-  use "lukas-reineke/indent-blankline.nvim"
 
   if packer_bootstrap then
     require('packer').sync()
