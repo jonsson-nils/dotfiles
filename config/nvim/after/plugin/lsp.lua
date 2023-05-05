@@ -1,7 +1,6 @@
 local lsp = require("lsp-zero")
 
-vim.lsp.set_log_level("debug")
-lsp.preset("recommended")
+lsp.preset({})
 lsp.ensure_installed({
   'tsserver',
   'eslint',
@@ -17,19 +16,12 @@ lsp.ensure_installed({
   'terraformls',
   'texlab',
 })
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-})
 lsp.set_preferences({
-  sign_icons = { }
+  sign_icons = {}
 })
 
 local on_attach = function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
+  local opts = { buffer = bufnr, remap = false }
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end)
   vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end)
@@ -68,3 +60,44 @@ lsp.configure('rust_analyzer', {
 lsp.on_attach(on_attach)
 lsp.setup()
 
+local cmp = require('cmp')
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+cmp.setup({
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+  mapping = {
+    ['<cr>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    ['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<Down>'] = cmp.mapping.select_next_item(cmp_select),
+  },
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  window = {
+    documentation = {
+      max_height = 15,
+      max_width = 60,
+    }
+  },
+  formatting = {
+    fields = { 'abbr', 'menu', 'kind' },
+    format = function(entry, item)
+      local short_name = {
+        nvim_lsp = 'LSP',
+        nvim_lua = 'nvim'
+      }
+
+      local menu_name = short_name[entry.source.name] or entry.source.name
+
+      item.menu = string.format('[%s]', menu_name)
+      return item
+    end,
+  },
+})
