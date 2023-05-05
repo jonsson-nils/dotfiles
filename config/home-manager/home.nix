@@ -41,7 +41,7 @@
     ".config/nvim/after/plugin/neogit.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/neogit.lua;
     ".config/nvim/after/plugin/fugitive.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/fugitive.lua;
     ".config/nvim/after/plugin/fidget.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/fidget.lua;
-    ".config/nvim/after/plugin/git-gutter.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/git-gutter.lua;
+    ".config/nvim/after/plugin/gitsigns.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/gitsigns.lua;
     ".config/nvim/after/plugin/harpoon.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/harpoon.lua;
     ".config/nvim/after/plugin/lsp.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/lsp.lua;
     ".config/nvim/after/plugin/lualine.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/lualine.lua;
