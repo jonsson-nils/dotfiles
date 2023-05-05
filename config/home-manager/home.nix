@@ -15,6 +15,8 @@
   home.file = {
     ".gitconfig".source = ~/projects/dotfiles/.gitconfig;
 
+    ".config/nixpkgs/config.nix".source = ~/projects/dotfiles/config/nixpkgs/config.nix;
+
     ".cargo/config.toml".source = ~/projects/dotfiles/cargo/config.toml;
 
     ".config/helix/config.toml".source = ~/projects/dotfiles/config/helix/config.toml;
