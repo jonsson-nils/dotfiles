@@ -1,33 +1,33 @@
 vim.api.nvim_set_hl(0, 'NormalFloat', {bg='#1d1e29'})
 
-require"octo".setup({
-  default_remote = {"upstream", "origin"}; -- order to try remotes
-  ssh_aliases = {},                        -- SSH aliases. e.g. `ssh_aliases = {["github.com-work"] = "github.com"}`
-  reaction_viewer_hint_icon = "";         -- marker for user reactions
-  user_icon = " ";                        -- user icon
-  timeline_marker = "";                   -- timeline marker
-  timeline_indent = "2";                   -- timeline indentation
-  right_bubble_delimiter = "";            -- bubble delimiter
-  left_bubble_delimiter = "";             -- bubble delimiter
-  github_hostname = "";                    -- GitHub Enterprise host
+require'octo'.setup({
+  default_remote = {'upstream', 'origin'}; -- order to try remotes
+  ssh_aliases = {},                        -- SSH aliases. e.g. `ssh_aliases = {['github.com-work'] = 'github.com'}`
+  reaction_viewer_hint_icon = '';         -- marker for user reactions
+  user_icon = ' ';                        -- user icon
+  timeline_marker = '';                   -- timeline marker
+  timeline_indent = '2';                   -- timeline indentation
+  right_bubble_delimiter = '';            -- bubble delimiter
+  left_bubble_delimiter = '';             -- bubble delimiter
+  github_hostname = '';                    -- GitHub Enterprise host
   snippet_context_lines = 4;               -- number or lines around commented lines
   gh_env = {},                             -- extra environment variables to pass on to GitHub CLI, can be a table or function returning a table
   timeout = 5000,                          -- timeout for requests between the remote server
   ui = {
-    use_signcolumn = true,                 -- show "modified" marks on the sign column
+    use_signcolumn = true,                 -- show 'modified' marks on the sign column
   },
   issues = {
     order_by = {                           -- criteria to sort results of `Octo issue list`
-      field = "CREATED_AT",                -- either COMMENTS, CREATED_AT or UPDATED_AT (https://docs.github.com/en/graphql/reference/enums#issueorderfield)
-      direction = "DESC"                   -- either DESC or ASC (https://docs.github.com/en/graphql/reference/enums#orderdirection)
+      field = 'CREATED_AT',                -- either COMMENTS, CREATED_AT or UPDATED_AT (https://docs.github.com/en/graphql/reference/enums#issueorderfield)
+      direction = 'DESC'                   -- either DESC or ASC (https://docs.github.com/en/graphql/reference/enums#orderdirection)
     }
   },
   pull_requests = {
     order_by = {                           -- criteria to sort the results of `Octo pr list`
-      field = "CREATED_AT",                -- either COMMENTS, CREATED_AT or UPDATED_AT (https://docs.github.com/en/graphql/reference/enums#issueorderfield)
-      direction = "DESC"                   -- either DESC or ASC (https://docs.github.com/en/graphql/reference/enums#orderdirection)
+      field = 'CREATED_AT',                -- either COMMENTS, CREATED_AT or UPDATED_AT (https://docs.github.com/en/graphql/reference/enums#issueorderfield)
+      direction = 'DESC'                   -- either DESC or ASC (https://docs.github.com/en/graphql/reference/enums#orderdirection)
     },
-    always_select_remote_on_create = "false" -- always give prompt to select base remote repo when creating PRs
+    always_select_remote_on_create = 'false' -- always give prompt to select base remote repo when creating PRs
   },
   file_panel = {
     size = 10,                             -- changed files panel rows
