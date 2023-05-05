@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
   use 'j-hui/fidget.nvim'
   use 'folke/which-key.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
-  use 'nvim-orgmode/orgmode'
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',

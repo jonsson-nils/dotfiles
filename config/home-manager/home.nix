@@ -36,7 +36,6 @@
     ".config/nvim/after/plugin/hop.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/hop.lua;
     ".config/nvim/after/plugin/which-key.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/which-key.lua;
     ".config/nvim/after/plugin/octo.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/octo.lua;
-    ".config/nvim/after/plugin/orgmode.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/orgmode.lua;
     ".config/nvim/after/plugin/copilot.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/copilot.lua;
     ".config/nvim/after/plugin/neotree.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/neotree.lua;
     ".config/nvim/after/plugin/fugitive.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/fugitive.lua;
