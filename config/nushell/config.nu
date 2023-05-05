@@ -121,6 +121,15 @@ module completions {
     --verbose(-v)                                   # be more verbose
     --help                                          # Display the help message for this command
   ]
+
+  # Apply changes
+  export extern "home-manager switch" []
+  # List all the generations
+  export extern "home-manager generations" []
+  # Remove a generation
+  export extern "home-manager remove-generations" []
+  # Remove all generations after a given timestamp
+  export extern "home-manager expire-generations" []
 }
 
 # Get just the extern definitions without the custom completion commands
