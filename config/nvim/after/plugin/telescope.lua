@@ -13,20 +13,20 @@ telescope.load_extension("refactoring")
 telescope.load_extension("git_worktree")
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>ff', builtin.git_files, {})
-vim.keymap.set('n', '<leader>fa', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>fs', function()
+vim.keymap.set('n', '<leader>tg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>tf', builtin.git_files, {})
+vim.keymap.set('n', '<leader>ta', builtin.find_files, {})
+vim.keymap.set('n', '<leader>tb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>t?', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>ts', function()
   builtin.grep_string({ search = vim.fn.input("grep > ") })
 end)
 vim.api.nvim_set_keymap(
 	"v",
-	"<leader>fr",
+	"<leader>tr",
 	"<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
 	{ noremap = true }
 )
-vim.keymap.set('n', '<leader>fwo', telescope.extensions.git_worktree.git_worktrees)
-vim.keymap.set('n', '<leader>fwc', telescope.extensions.git_worktree.create_git_worktree)
+vim.keymap.set('n', '<leader>two', telescope.extensions.git_worktree.git_worktrees)
+vim.keymap.set('n', '<leader>twc', telescope.extensions.git_worktree.create_git_worktree)
 
