@@ -123,6 +123,17 @@ return require('packer').startup(function(use)
       require("nvim-surround").setup({})
     end
   })
+  use { 'ThePrimeagen/git-worktree.nvim',
+    config = function()
+      require('git-worktree').setup({
+        update_on_change = true,
+        clearjumps_on_change = true,
+        autopush = true,
+        autopull = true,
+        disable_commands = false,
+      })
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()

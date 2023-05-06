@@ -1,3 +1,4 @@
+local telescope = require('telescope')
 require('telescope').setup {
   extensions = {
     ['ui-select'] = {
@@ -7,8 +8,9 @@ require('telescope').setup {
   }
 }
 
-require('telescope').load_extension('ui-select')
-require("telescope").load_extension("refactoring")
+telescope.load_extension('ui-select')
+telescope.load_extension("refactoring")
+telescope.load_extension("git_worktree")
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -25,4 +27,6 @@ vim.api.nvim_set_keymap(
 	"<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
 	{ noremap = true }
 )
+vim.keymap.set('n', '<leader>fwo', telescope.extensions.git_worktree.git_worktrees)
+vim.keymap.set('n', '<leader>fwc', telescope.extensions.git_worktree.create_git_worktree)
 
