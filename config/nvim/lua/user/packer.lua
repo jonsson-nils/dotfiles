@@ -82,13 +82,13 @@ return require('packer').startup(function(use)
     },
   }
   use {
-    'phaazon/hop.nvim',
-    branch = 'v2',
-  }
-  use {
     'sindrets/diffview.nvim',
     requires = 'nvim-lua/plenary.nvim',
   }
+  use 'ggandor/leap.nvim'
+  use 'ggandor/flit.nvim'
+  use 'tpope/vim-repeat'
+
   use {
     "nvim-neorg/neorg",
     config = function()
