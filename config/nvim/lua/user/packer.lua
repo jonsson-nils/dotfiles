@@ -157,6 +157,11 @@ return require('packer').startup(function(use)
       "rcarriga/nvim-notify",
     }
   })
+  use({
+    "folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    module = "persistence",
+  })
 
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
 
