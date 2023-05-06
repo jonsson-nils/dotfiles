@@ -37,7 +37,13 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l")
 vim.keymap.set("n", "<leader>ws", "<C-w>s")
 vim.keymap.set("n", "<leader>wv", "<C-w>v")
 vim.keymap.set("n", "<leader>wq", "<C-w>q")
+vim.keymap.set('n', '<leader>ww', '<C-w>w')
+vim.keymap.set('n', '<leader>wx', '<C-w>x')
 vim.keymap.set("n", "<leader>w=", "<C-w>=")
+
+vim.keymap.set('n', '<leader>bq', [[:bdelete<CR>]])
+vim.keymap.set('n', '<leader>bw', [[:w<CR>]])
+vim.keymap.set('n', '<leader>bx', [[:w<CR>:bdelete<CR>]])
 
 vim.keymap.set("n", "gs", "^")
 vim.keymap.set("v", "gs", "^")
