@@ -55,6 +55,8 @@
     ".local/bin/update-rust-analyzer".source = ~/projects/dotfiles/local/bin/update-rust-analyzer;
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = with pkgs; [
     # vcs
     gh
