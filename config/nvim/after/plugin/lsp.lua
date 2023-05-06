@@ -16,8 +16,14 @@ lsp.ensure_installed({
   'terraformls',
   'texlab',
 })
+
 lsp.set_preferences({
-  sign_icons = {}
+  sign_icons = {
+    error = " ",
+    warn = " ",
+    hint = " ",
+    info = " "
+  },
 })
 
 local on_attach = function(_, bufnr)
