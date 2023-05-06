@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
   use 'j-hui/fidget.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
+  use 'simrat39/symbols-outline.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
