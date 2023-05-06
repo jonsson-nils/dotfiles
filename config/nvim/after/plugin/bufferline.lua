@@ -1,4 +1,4 @@
-vim.opt.termguicolors = true
+--vim.opt.termguicolors = true
 local status, bufferline = pcall(require, "bufferline")
 if not status then
   print("ERROR bufferline")
@@ -7,13 +7,14 @@ end
 
 bufferline.setup({
   options = {
-    indicator_icon = "▎",
+    separator_style = 'thin',
+    indicator_icon =  "",
     modified_icon = "●",
     buffer_close_icon = "",
     close_icon = "",
     left_trunc_marker = "",
     right_trunc_marker = "",
-    numbers = "ordinal",
+    numbers = "none",
     max_name_length = 15,
     max_prefix_length = 6,
     diagnostics = "nvim_lsp",
@@ -28,4 +29,3 @@ bufferline.setup({
     end,
   },
 })
-
