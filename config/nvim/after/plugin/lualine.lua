@@ -1,6 +1,7 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
+    globalstatus = true,
     theme = 'auto',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
@@ -10,7 +11,6 @@ require('lualine').setup {
     },
     ignore_focus = {},
     always_divide_middle = true,
-    globalstatus = false,
     refresh = {
       statusline = 1000,
       tabline = 1000,
@@ -46,4 +46,3 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
-
