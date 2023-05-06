@@ -340,9 +340,6 @@ let-env config = {
     highlight: {bg: 'yellow' fg: 'black' }
 
     status: {
-      # warn: {bg: 'yellow', fg: 'blue'}
-      # error: {bg: 'yellow', fg: 'blue'}
-      # info: {bg: 'yellow', fg: 'blue'}
     }
 
     try: {
