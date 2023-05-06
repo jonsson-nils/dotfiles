@@ -83,6 +83,7 @@ return require('packer').startup(function(use)
     'phaazon/hop.nvim',
     branch = 'v2',
   }
+  use     "folke/zen-mode.nvim"
 
   if packer_bootstrap then
     require('packer').sync()
