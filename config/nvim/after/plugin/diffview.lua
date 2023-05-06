@@ -90,3 +90,10 @@ require("diffview").setup {
   hooks = {},
 }
 
+vim.keymap.set('n', '<leader>/do', [[:DiffviewOpen<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>/dc', [[:DiffviewClose<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>/dr', [[:DiffviewRefresh<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>/dt', [[:DiffviewToggleFiles<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>/dg', [[:DiffviewFocusFiles<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>/dh', [[:DiffviewFileHistory<CR>]], { noremap = true, silent = true })
+
