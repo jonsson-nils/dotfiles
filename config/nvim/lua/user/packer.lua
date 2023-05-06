@@ -94,9 +94,9 @@ return require('packer').startup(function(use)
     config = function()
       require('neorg').setup {
         load = {
-          ["core.defaults"] = {},        -- Loads default behaviour
-          ["core.concealer"] = {},       -- Adds pretty icons to your documents
-          ["core.dirman"] = {            -- Manages Neorg workspaces
+          ["core.defaults"] = {},  -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = {      -- Manages Neorg workspaces
             config = {
               workspaces = {
                 notes = "~/notes",
@@ -108,6 +108,13 @@ return require('packer').startup(function(use)
     end,
     run = ":Neorg sync-parsers",
     requires = "nvim-lua/plenary.nvim",
+  }
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-treesitter/nvim-treesitter" }
+    }
   }
 
   if packer_bootstrap then

@@ -8,6 +8,7 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('ui-select')
+require("telescope").load_extension("refactoring")
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -18,4 +19,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fs', function()
   builtin.grep_string({ search = vim.fn.input("grep > ") })
 end)
+vim.api.nvim_set_keymap(
+	"v",
+	"<leader>fr",
+	"<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+	{ noremap = true }
+)
 
