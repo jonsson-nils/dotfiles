@@ -5,7 +5,7 @@ require("zen-mode").setup {
     -- * an absolute number of cells when > 1
     -- * a percentage of the width / height of the editor when <= 1
     -- * a function that returns the width or the height
-    width = 80, -- width of the Zen window
+    width = 120, -- width of the Zen window
     height = 1, -- height of the Zen window
     -- by default, no options are changed for the Zen window
     -- uncomment any of the options below, or add other vim.wo options you want to apply
@@ -25,7 +25,7 @@ require("zen-mode").setup {
       ruler = false,
       showcmd = false,
     },
-    twilight = { enabled = true },  -- enable to start Twilight when zen mode opens
+    twilight = { enabled = false },  -- enable to start Twilight when zen mode opens
     gitsigns = { enabled = false }, -- disables git signs
     tmux = { enabled = false },     -- disables the tmux statusline
     -- this will change the font size on alacritty when in zen mode
