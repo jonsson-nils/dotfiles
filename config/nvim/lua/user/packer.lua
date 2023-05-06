@@ -141,6 +141,10 @@ return require('packer').startup(function(use)
     end,
     ft = { "markdown" },
   }
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+  }
 
   if packer_bootstrap then
     require('packer').sync()
