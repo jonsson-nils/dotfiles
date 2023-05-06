@@ -85,6 +85,10 @@ return require('packer').startup(function(use)
     'phaazon/hop.nvim',
     branch = 'v2',
   }
+  use {
+    'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+  }
 
   if packer_bootstrap then
     require('packer').sync()
