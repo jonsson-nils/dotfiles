@@ -25,9 +25,9 @@ require("zen-mode").setup {
       ruler = false,
       showcmd = false,
     },
-    twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+    twilight = { enabled = true },  -- enable to start Twilight when zen mode opens
     gitsigns = { enabled = false }, -- disables git signs
-    tmux = { enabled = false }, -- disables the tmux statusline
+    tmux = { enabled = false },     -- disables the tmux statusline
     -- this will change the font size on alacritty when in zen mode
     -- requires  Alacritty Version 0.10.0 or higher
     -- uses `alacritty msg` subcommand to change font size

@@ -13,6 +13,9 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
+  use "folke/zen-mode.nvim"
+  use "folke/twilight.nvim"
+  use 'folke/which-key.nvim'
   use 'preservim/nerdcommenter'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'nvim-treesitter/playground'
@@ -22,7 +25,6 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'github/copilot.vim'
   use 'j-hui/fidget.nvim'
-  use 'folke/which-key.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
   use {
     'nvim-telescope/telescope.nvim',
@@ -83,11 +85,8 @@ return require('packer').startup(function(use)
     'phaazon/hop.nvim',
     branch = 'v2',
   }
-  use     "folke/zen-mode.nvim"
 
   if packer_bootstrap then
     require('packer').sync()
   end
 end)
-
-
