@@ -47,28 +47,28 @@ require("trouble").setup {
   use_diagnostic_signs = false   -- enabling this will use the signs defined in your lsp client
 }
 
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+vim.keymap.set("n", "<leader>dx", "<cmd>TroubleToggle<cr>",
   { silent = true, noremap = true }
 )
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+vim.keymap.set("n", "<leader>dw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
   { silent = true, noremap = true }
 )
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+vim.keymap.set("n", "<leader>dd", "<cmd>TroubleToggle document_diagnostics<cr>",
   { silent = true, noremap = true }
 )
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+vim.keymap.set("n", "<leader>dl", "<cmd>TroubleToggle loclist<cr>",
   { silent = true, noremap = true }
 )
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+vim.keymap.set("n", "<leader>dq", "<cmd>TroubleToggle quickfix<cr>",
   { silent = true, noremap = true }
 )
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   { silent = true, noremap = true }
 )
 
-vim.keymap.set('n', '<leader>xl', function()
+vim.keymap.set('n', '<leader>dj', function()
   require("trouble").next { skip_groups = true, jump = true }
 end)
-vim.keymap.set('n', '<leader>xh', function()
+vim.keymap.set('n', '<leader>dk', function()
   require("trouble").previous { skip_groups = true, jump = true }
 end)
