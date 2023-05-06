@@ -28,11 +28,11 @@ vim.keymap.set('n', '<leader>wx', '<C-w>x')
 vim.keymap.set("n", "<leader>w=", "<C-w>=")
 
 -- buffer managment
-vim.keymap.set('n', '<leader>bq', [[:bdelete<CR>]])
-vim.keymap.set('n', '<leader>bw', [[:w<CR>]])
-vim.keymap.set('n', '<leader>bx', [[:w<CR>:bdelete<CR>]])
-vim.keymap.set('n', '<leader>bl', [[:bnext<CR>]])
-vim.keymap.set('n', '<leader>bh', [[:bprevious<CR>]])
+vim.keymap.set('n', '<leader>mq', [[:bdelete<CR>]])
+vim.keymap.set('n', '<leader>mw', [[:w<CR>]])
+vim.keymap.set('n', '<leader>mx', [[:w<CR>:bdelete<CR>]])
+vim.keymap.set('n', '<leader>mj', [[:bnext<CR>]])
+vim.keymap.set('n', '<leader>mk', [[:bprevious<CR>]])
 
 -- navigation
 --vim.keymap.set('n', 'j', 'jzz', { noremap = true, silent = true })
