@@ -162,6 +162,14 @@ return require('packer').startup(function(use)
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     module = "persistence",
   })
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup({
+        disable_filetype = { "TelescopePrompt" , "vim" },
+      })
+    end,
+  }
 
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
 
