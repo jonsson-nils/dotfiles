@@ -8,6 +8,14 @@ require("neo-tree").setup({
   source_selector = {
     winbar = false,
     statusline = false
+  },
+  event_handlers = {
+    {
+      event = 'file_opened',
+      handler = function(file_path)
+        require('neo-tree').close_all()
+      end
+    },
   }
 })
 vim.keymap.set("n", "<leader>tt", [[:Neotree reveal<cr>]])
