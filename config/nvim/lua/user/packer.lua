@@ -145,6 +145,12 @@ return require('packer').startup(function(use)
     "folke/trouble.nvim",
     requires = "nvim-tree/nvim-web-devicons",
   }
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+
+  vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
 
   if packer_bootstrap then
     require('packer').sync()

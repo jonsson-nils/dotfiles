@@ -54,6 +54,7 @@
     ".config/nvim/after/plugin/refactoring.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/refactoring.lua;
     ".config/nvim/after/plugin/markdown-preview.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/markdown-preview.lua;
     ".config/nvim/after/plugin/trouble.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/trouble.lua;
+    ".config/nvim/after/plugin/todo-comments.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/todo-comments.lua;
 
     ".local/bin/update-rust-analyzer".source = ~/projects/dotfiles/local/bin/update-rust-analyzer;
   };
