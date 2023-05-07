@@ -166,9 +166,23 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup({
-        disable_filetype = { "TelescopePrompt" , "vim" },
+        disable_filetype = { "TelescopePrompt", "vim" },
       })
     end,
+  }
+  use {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        theme = 'doom',          --  theme is doom and hyper default is hyper
+        disable_move = true,      --  default is false disable move keymap for hyper
+        shortcut_type = 'letter', --  shorcut type 'letter' or 'number'
+        change_to_vcs_root = true,        -- default is false,for open file in hyper mru. it will change to the root of vcs
+        config = {},              --  config used for theme
+      }
+    end,
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
