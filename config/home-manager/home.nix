@@ -92,6 +92,7 @@
 
     # node
     nodejs
+    deno
 
     # Rust compiler
     rustup
