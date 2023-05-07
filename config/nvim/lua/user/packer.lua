@@ -185,6 +185,14 @@ return require('packer').startup(function(use)
     end,
   }
 
+  -- todo: checkout these plugins
+  -- https://github.com/rest-nvim/rest.nvim
+  -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  -- https://github.com/desdic/agrolens.nvim
+  -- https://github.com/nvim-neotest/neotest
+  -- https://github.com/stevearc/overseer.nvim#features
+  -- https://github.com/Pocco81/auto-save.nvim
+
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
 
   if packer_bootstrap then
