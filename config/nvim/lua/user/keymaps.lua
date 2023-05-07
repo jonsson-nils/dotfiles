@@ -60,4 +60,5 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 --end)
 --
 
+vim.keymap.set('n', '<leader>/exit', ':qa<cr>')
 

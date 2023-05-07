@@ -39,7 +39,6 @@
     ".config/nvim/after/plugin/copilot.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/copilot.lua;
     ".config/nvim/after/plugin/neotree.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/neotree.lua;
     ".config/nvim/after/plugin/fugitive.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/fugitive.lua;
-    ".config/nvim/after/plugin/fidget.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/fidget.lua;
     ".config/nvim/after/plugin/gitsigns.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/gitsigns.lua;
     ".config/nvim/after/plugin/diffview.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/diffview.lua;
     ".config/nvim/after/plugin/harpoon.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/harpoon.lua;

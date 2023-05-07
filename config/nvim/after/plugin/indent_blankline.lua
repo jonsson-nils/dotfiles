@@ -1,26 +1,21 @@
+vim.cmd [[highlight IndentBlanklineContextChar guifg=#FFFFFF gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+
 require("indent_blankline").setup {
-    -- for example, context is off by default, use this to turn it on
-    show_current_context = true,
-    show_current_context_start = true,
+  -- for example, context is off by default, use this to turn it on
+  show_current_context = true,
+  show_current_context_start = false,
+  char_highlight_list = {
+    "IndentBlanklineIndent1",
+    "IndentBlanklineIndent2",
+    "IndentBlanklineIndent3",
+    "IndentBlanklineIndent4",
+    "IndentBlanklineIndent5",
+    "IndentBlanklineIndent6",
+  },
 }
-
-vim.api.nvim_create_autocmd('FileType', {
-  desc = 'Enable indent-blankline for dashboard',
-  pattern = '*',
-  group = vim.api.nvim_create_augroup('enable_indent_blankline', {clear = true}),
-  callback = function(_)
-    vim.cmd[[:IndentBlanklineEnable]]
-    vim.opt.colorcolumn = '80'
-  end,
-})
-
-vim.api.nvim_create_autocmd('FileType', {
-  desc = 'Disable indent-blankline for dashboard',
-  pattern = 'startup',
-  group = vim.api.nvim_create_augroup('disable_indent_blankline', {clear = true}),
-  callback = function(_)
-    vim.cmd[[:IndentBlanklineDisable]]
-    vim.opt.colorcolumn = {}
-  end,
-})
-

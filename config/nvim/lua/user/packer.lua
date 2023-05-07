@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
   use 'github/copilot.vim'
-  use 'j-hui/fidget.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
   use 'simrat39/symbols-outline.nvim'
   use {
