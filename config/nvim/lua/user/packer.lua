@@ -171,18 +171,18 @@ return require('packer').startup(function(use)
     end,
   }
   use {
-    'glepnir/dashboard-nvim',
-    event = 'VimEnter',
+    "startup-nvim/startup.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
-      require('dashboard').setup {
-        theme = 'doom',          --  theme is doom and hyper default is hyper
-        disable_move = true,      --  default is false disable move keymap for hyper
-        shortcut_type = 'letter', --  shorcut type 'letter' or 'number'
-        change_to_vcs_root = true,        -- default is false,for open file in hyper mru. it will change to the root of vcs
-        config = {},              --  config used for theme
-      }
+      require "startup".setup({ theme = 'evil' })
+    end
+  }
+
+  use {
+    'petertriho/nvim-scrollbar',
+    config = function()
+      require('scrollbar').setup()
     end,
-    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
