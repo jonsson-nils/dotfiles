@@ -18,7 +18,13 @@ require("neo-tree").setup({
     },
   }
 })
-vim.keymap.set("n", "<leader>nf", [[:Neotree reveal<cr>]])
-vim.keymap.set("n", "<leader>ng", [[:Neotree git_status git_base=main reveal<cr>]])
-vim.keymap.set("n", "<leader>nb", [[:Neotree buffers reveal<cr>]])
+vim.keymap.set("n", "<leader>nf", function()
+  vim.cmd [[Neotree reveal]]
+end)
+vim.keymap.set("n", "<leader>ng", function()
+  vim.cmd [[Neotree git_status git_base=main reveal]]
+end)
+vim.keymap.set("n", "<leader>nb", function()
+  vim.cmd [[Neotree buffers reveal]]
+end)
 
