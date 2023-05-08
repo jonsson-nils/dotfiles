@@ -132,6 +132,8 @@ return require('packer').startup(function(use)
         autopull = true,
         disable_commands = false,
       })
+      vim.keymap.set('n', '<leader>two', require('telescope').extensions.git_worktree.git_worktrees)
+      vim.keymap.set('n', '<leader>twc', require('telescope').extensions.git_worktree.create_git_worktree)
     end
   }
   use {
