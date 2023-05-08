@@ -1,22 +1,9 @@
 require("zen-mode").setup {
   window = {
-    backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-    -- height and width can be:
-    -- * an absolute number of cells when > 1
-    -- * a percentage of the width / height of the editor when <= 1
-    -- * a function that returns the width or the height
-    width = 120, -- width of the Zen window
-    height = 1, -- height of the Zen window
-    -- by default, no options are changed for the Zen window
-    -- uncomment any of the options below, or add other vim.wo options you want to apply
+    backdrop = 0.95,
+    width = 120,
+    height = 1,
     options = {
-      -- signcolumn = "no", -- disable signcolumn
-      -- number = false, -- disable number column
-      -- relativenumber = false, -- disable relative numbers
-      -- cursorline = false, -- disable cursorline
-      -- cursorcolumn = false, -- disable cursor column
-      -- foldcolumn = "0", -- disable fold column
-      -- list = false, -- disable whitespace characters
     },
   },
   plugins = {
@@ -25,24 +12,22 @@ require("zen-mode").setup {
       ruler = false,
       showcmd = false,
     },
-    twilight = { enabled = false },  -- enable to start Twilight when zen mode opens
-    gitsigns = { enabled = false }, -- disables git signs
-    tmux = { enabled = false },     -- disables the tmux statusline
-    -- this will change the font size on alacritty when in zen mode
-    -- requires  Alacritty Version 0.10.0 or higher
-    -- uses `alacritty msg` subcommand to change font size
+    twilight = { enabled = false },
+    gitsigns = { enabled = false },
+    tmux = { enabled = false },
     alacritty = {
       enabled = false,
-      font = "14", -- font size
+      font = "14",
     },
   },
-  -- callback where you can add custom code when the Zen window opens
-  on_open = function(win)
+
+  on_open = function(_)
   end,
-  -- callback where you can add custom code when the Zen window closes
+
   on_close = function()
   end,
 }
 
-vim.keymap.set('n', '<leader>zz', [[:ZenMode<cr>]])
-
+vim.keymap.set('n', '<leader>zz', function()
+  vim.cmd [[ZenMode]]
+end)
