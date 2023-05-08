@@ -28,11 +28,22 @@ vim.keymap.set('n', '<leader>wx', '<C-w>x')
 vim.keymap.set("n", "<leader>w=", "<C-w>=")
 
 -- buffer managment
-vim.keymap.set('n', '<leader>mq', [[:bdelete<CR>]])
-vim.keymap.set('n', '<leader>mw', [[:w<CR>]])
-vim.keymap.set('n', '<leader>mx', [[:w<CR>:bdelete<CR>]])
-vim.keymap.set('n', '<leader>mj', [[:bnext<CR>]])
-vim.keymap.set('n', '<leader>mk', [[:bprevious<CR>]])
+vim.keymap.set('n', '<leader>mq', function()
+  vim.cmd('bdelete ' .. vim.fn.bufnr())
+end)
+vim.keymap.set('n', '<leader>mw', function()
+  vim.cmd [[w]]
+end)
+vim.keymap.set('n', '<leader>mx', function()
+  vim.cmd [[w]]
+  vim.cmd('bdelete ' .. vim.fn.bufnr())
+end)
+vim.keymap.set('n', '<leader>mk', function()
+  vim.cmd [[bnext]]
+end)
+vim.keymap.set('n', '<leader>mj', function()
+  vim.cmd [[bprevious]]
+end)
 
 -- navigation
 --vim.keymap.set('n', 'j', 'jzz', { noremap = true, silent = true })
@@ -60,5 +71,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 --end)
 --
 
-vim.keymap.set('n', '<leader>/exit', ':qa<cr>')
-
+vim.keymap.set('n', '<leader>/exit', function()
+  vim.cmd [[qa]]
+end)
