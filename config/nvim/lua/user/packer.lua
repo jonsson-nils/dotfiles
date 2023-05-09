@@ -23,7 +23,35 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
-  use 'github/copilot.vim'
+  use { 'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'VimEnter',
+    config = function()
+      require('copilot').setup({
+        panel = {
+          enabled = true,
+          auto_refresh = false,
+        },
+        layout = {
+          position = 'right',
+          ratio = 0.5,
+        },
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          debounce = 75,
+          keymap = {
+            accept = "<right>",
+            accept_word = false,
+            accept_line = false,
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<left>",
+          },
+        },
+      })
+    end,
+  }
   use 'nvim-telescope/telescope-ui-select.nvim'
   use 'simrat39/symbols-outline.nvim'
   use {
@@ -193,6 +221,7 @@ return require('packer').startup(function(use)
   -- https://github.com/nvim-neotest/neotest
   -- https://github.com/stevearc/overseer.nvim#features
   -- https://github.com/Pocco81/auto-save.nvim
+  -- https://github.com/tpope/vim-dadbod
 
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
 
