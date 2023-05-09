@@ -29,7 +29,7 @@ vim.keymap.set("n", "<leader>w=", "<C-w>=")
 
 -- buffer managment
 vim.keymap.set('n', '<leader>mq', function()
-  vim.cmd('bdelete ' .. vim.fn.bufnr())
+  vim.cmd('bdelete  ' .. vim.fn.bufnr())
 end)
 vim.keymap.set('n', '<leader>mw', function()
   vim.cmd [[w]]
@@ -63,8 +63,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true, noremap = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true, noremap = true })
 
 --vim.keymap.set("n", "<leader><leader>", function()
 --  vim.cmd("so")
