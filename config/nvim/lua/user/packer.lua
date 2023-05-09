@@ -10,6 +10,27 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+local updating = false
+vim.keymap.set('n', '<leader>/source', function()
+  if (updating) then
+    print('already updating')
+    return
+  end
+  updating = true
+  vim.fn.jobstart('home-manager switch', {
+    cwd = os.getenv('HOME') .. '/projects/dotfiles',
+    on_exit = function(_, code)
+      updating = false
+      if (code ~= 0) then
+        print('failed to update')
+        return
+      end
+      vim.cmd [[luafile %]]
+      print('reloaded configuration')
+    end,
+  })
+end)
+
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
