@@ -73,6 +73,11 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
+  performance = {
+    trigger_debounce_time = 200,
+    throttle = 250,
+    fetching_timeout = 500,
+  },
   mapping = {
     ['<cr>'] = cmp.mapping.confirm({ select = true }),
     ['<C-e>'] = cmp.mapping.abort(),
