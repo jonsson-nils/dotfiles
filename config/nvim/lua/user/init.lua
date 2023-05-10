@@ -44,7 +44,6 @@ vim.keymap.set('n', '<leader>/source', function()
         error('failed to update')
         return
       end
-      vim.cmd [[luafile $MYVIMRC]]
       print('configuration reloaded')
     end,
     on_stdout = function(_, data)
