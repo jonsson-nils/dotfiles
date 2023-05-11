@@ -277,11 +277,16 @@ return require('packer').startup(function(use)
       })
     end,
   }
+  use {
+    'stevearc/overseer.nvim',
+    config = function()
+      require('overseer').setup()
+    end
+  }
 
   -- todo: checkout these plugins
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   -- https://github.com/desdic/agrolens.nvim
-  -- https://github.com/stevearc/overseer.nvim#features
   -- https://github.com/tpope/vim-dadbod
   -- todo: take a look at httpie
 
