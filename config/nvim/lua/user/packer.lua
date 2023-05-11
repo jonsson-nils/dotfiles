@@ -242,7 +242,7 @@ return require('packer').startup(function(use)
             json = "jq",
             html = false
             --html = function(body)
-              --return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
+            --return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
             --end
           },
         },
@@ -252,17 +252,38 @@ return require('packer').startup(function(use)
         custom_dynamic_variables = {},
         yank_dry_run = true,
       })
+      -- todo: configure hotkeys?
     end
+  }
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      'marilari88/neotest-vitest',
+      'nvim-neotest/neotest-plenary',
+      'rouge8/neotest-rust',
+      'nvim-neotest/neotest-jest',
+    },
+    config = function()
+      require('neotest').setup({
+        adapters = {
+          require('neotest-vitest'),
+          require("neotest-jest"),
+          require("neotest-plenary"),
+          require("neotest-rust"),
+        }
+      })
+    end,
   }
 
   -- todo: checkout these plugins
-  -- https://github.com/rest-nvim/rest.nvim
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   -- https://github.com/desdic/agrolens.nvim
-  -- https://github.com/nvim-neotest/neotest
   -- https://github.com/stevearc/overseer.nvim#features
-  -- https://github.com/Pocco81/auto-save.nvim
   -- https://github.com/tpope/vim-dadbod
+  -- todo: take a look at httpie
 
   vim.keymap.set('n', '<leader>/ps', require('packer').sync, { noremap = true, silent = true })
 
