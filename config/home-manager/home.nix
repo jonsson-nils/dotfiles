@@ -25,6 +25,8 @@
 
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
+    ".config/starship.toml".source = ~/projects/dotfiles/config/starship.toml;
+    ".cache/starship/init.nu".source = ~/projects/dotfiles/cache/starship/init.nu;
 
     ".config/nvim/init.lua".source = ~/projects/dotfiles/config/nvim/init.lua;
     ".config/nvim/lua/user/init.lua".source = ~/projects/dotfiles/config/nvim/lua/user/init.lua;
@@ -97,7 +99,8 @@
     rustup
 
     # C compiler
-    gcc
+    #gcc
+    clang
     pkgconfig
     cmake
 
