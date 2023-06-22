@@ -108,6 +108,9 @@
     go
     libcap
 
+    # databases
+    mysql80
+
     # shell
     openssh
     nushell
