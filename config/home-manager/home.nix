@@ -106,7 +106,9 @@
     libcap
 
     # databases
+    postgresql_15
     mysql80
+    mongosh
 
     # shell
     openssh
