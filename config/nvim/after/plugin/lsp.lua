@@ -1,21 +1,6 @@
 local lsp = require("lsp-zero")
 
 lsp.preset({})
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'lua_ls',
-  'rust_analyzer',
-  'nil_ls',
-  'dockerls',
-  'docker_compose_language_service',
-  'jsonls',
-  'marksman',
-  'sqlls',
-  'yamlls',
-  'terraformls',
-  'texlab',
-})
 
 lsp.set_preferences({
   sign_icons = {

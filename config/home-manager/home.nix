@@ -38,7 +38,6 @@
     ".config/nvim/after/plugin/leap.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/leap.lua;
     ".config/nvim/after/plugin/which-key.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/which-key.lua;
     ".config/nvim/after/plugin/octo.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/octo.lua;
-    #".config/nvim/after/plugin/copilot.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/copilot.lua;
     ".config/nvim/after/plugin/neotree.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/neotree.lua;
     ".config/nvim/after/plugin/fugitive.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/fugitive.lua;
     ".config/nvim/after/plugin/gitsigns.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/gitsigns.lua;
@@ -52,12 +51,10 @@
     ".config/nvim/after/plugin/undotree.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/undotree.lua;
     ".config/nvim/after/plugin/zen-mode.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/zen-mode.lua;
     ".config/nvim/after/plugin/twilight.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/twilight.lua;
-    ".config/nvim/after/plugin/refactoring.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/refactoring.lua;
     ".config/nvim/after/plugin/markdown-preview.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/markdown-preview.lua;
     ".config/nvim/after/plugin/trouble.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/trouble.lua;
     ".config/nvim/after/plugin/todo-comments.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/todo-comments.lua;
     ".config/nvim/after/plugin/symbols-outline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/symbols-outline.lua;
-    ".config/nvim/after/plugin/noice.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/noice.lua;
     ".config/nvim/after/plugin/persistence.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/persistence.lua;
 
     ".local/bin/update-rust-analyzer".source = ~/projects/dotfiles/local/bin/update-rust-analyzer;
@@ -66,7 +63,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
-      url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+      url = "https://github.com/nix-community/neovim-nightly-overlay/archive/a9719c5050b1abbb0adada7dd9f98e0cdbd3ed53.tar.gz";
     }))
   ];
 

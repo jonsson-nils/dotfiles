@@ -62,11 +62,16 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
   use {
     'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
+    branch = 'v2.x',
     requires = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' },             -- Required
-      { 'williamboman/mason.nvim' },           -- Optional
+      {                                      -- Optional
+        'williamboman/mason.nvim',
+        build = function()
+          pcall(vim.cmd, 'MasonUpdate')
+        end,
+      },
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
@@ -82,7 +87,6 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' }, -- Optional
     }
   }
-  use { 'LhKipp/nvim-nu', { run = ':TSInstall nu' } }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
@@ -117,33 +121,6 @@ return require('packer').startup(function(use)
   use 'ggandor/flit.nvim'
   use 'tpope/vim-repeat'
 
-  use {
-    'nvim-neorg/neorg',
-    config = function()
-      require('neorg').setup {
-        load = {
-          ['core.defaults'] = {},  -- Loads default behaviour
-          ['core.concealer'] = {}, -- Adds pretty icons to your documents
-          ['core.dirman'] = {      -- Manages Neorg workspaces
-            config = {
-              workspaces = {
-                notes = '~/notes',
-              },
-            },
-          },
-        },
-      }
-    end,
-    run = ':Neorg sync-parsers',
-    requires = 'nvim-lua/plenary.nvim',
-  }
-  use {
-    'ThePrimeagen/refactoring.nvim',
-    requires = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'nvim-treesitter/nvim-treesitter' }
-    }
-  }
   use({
     'kylechui/nvim-surround',
     tag = '*', -- Use for stability; omit to use `main` branch for the latest features
@@ -179,13 +156,6 @@ return require('packer').startup(function(use)
     'folke/todo-comments.nvim',
     requires = 'nvim-lua/plenary.nvim',
   }
-  use({
-    'folke/noice.nvim',
-    requires = {
-      'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
-    }
-  })
   use({
     'folke/persistence.nvim',
     event = 'BufReadPre', -- this will only start session saving when an actual file was opened
