@@ -65,8 +65,8 @@ return require('packer').startup(function(use)
     branch = 'v2.x',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },             -- Required
-      {                                      -- Optional
+      { 'neovim/nvim-lspconfig' }, -- Required
+      {                            -- Optional
         'williamboman/mason.nvim',
         build = function()
           pcall(vim.cmd, 'MasonUpdate')
@@ -252,6 +252,17 @@ return require('packer').startup(function(use)
     config = function()
       require('overseer').setup()
     end
+  }
+  use {
+    "someone-stole-my-name/yaml-companion.nvim",
+    requires = {
+      { "neovim/nvim-lspconfig" },
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-telescope/telescope.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("yaml_schema")
+    end,
   }
 
   -- todo: checkout these plugins

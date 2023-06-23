@@ -82,8 +82,9 @@
     sccache
     tokei
     hyperfine
-    mold
+    #mold
     jq
+    yq
     oha
     openssl
     openssl.dev
@@ -96,14 +97,16 @@
     rustup
 
     # C compiler
-    #gcc
-    clang
+    gcc
+    #clang
     pkgconfig
     cmake
 
     # go compiler
     go
     libcap
+
+    luajitPackages.luarocks-nix
 
     # databases
     postgresql_15
