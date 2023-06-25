@@ -82,7 +82,7 @@
     sccache
     tokei
     hyperfine
-    #mold
+    mold
     jq
     yq
     oha
@@ -97,8 +97,8 @@
     rustup
 
     # C compiler
-    gcc
-    #clang
+    #gcc
+    clang
     pkgconfig
     cmake
 
