@@ -12,5 +12,5 @@ ln -sf "$DOTFILES_HOME/zsh/"* "$HOME/.oh-my-zsh/custom/"
 # Configure Git
 git config --global user.name "Nils Jonsson"
 git config --global user.email "nils.jonsson@jonsson-analytics.com"
-git config --global core.editor "code"
+git config --global core.editor "vim"
 git config --global pull.ff only
