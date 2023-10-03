@@ -75,9 +75,14 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
+let-env ANDROID_SDK_ROOT = /home/jonsson-nils/android-sdk
+let-env ANDROID_HOME = $env.ANDROID_SDK_ROOT
+
 let-env PATH = ($env.PATH | prepend ~/google-cloud-sdk/bin)
 let-env PATH = ($env.PATH | append ~/.cargo/bin)
 let-env PATH = ($env.PATH | append ~/.local/bin)
+let-env PATH = ($env.PATH | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin")
+let-env PATH = ($env.PATH | append $"($env.ANDROID_SDK_ROOT)/platform-tools")
 
 load-env {
   SHELL:  (which nu | get 0 | get path)

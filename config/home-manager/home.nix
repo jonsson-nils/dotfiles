@@ -88,6 +88,7 @@
     oha
     openssl
     openssl.dev
+    openjdk17-bootstrap
 
     # node
     nodejs
