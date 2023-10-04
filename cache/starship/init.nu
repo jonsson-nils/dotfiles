@@ -1,12 +1,12 @@
-let-env STARSHIP_SHELL = "nu"
-let-env STARSHIP_SESSION_KEY = (random chars -l 16)
-let-env PROMPT_MULTILINE_INDICATOR = (^/home/jonsson-nils/.nix-profile/bin/starship prompt --continuation)
+$env.STARSHIP_SHELL = "nu"
+$env.STARSHIP_SESSION_KEY = (random chars -l 16)
+$env.PROMPT_MULTILINE_INDICATOR = (^/home/jonsson-nils/.nix-profile/bin/starship prompt --continuation)
 
 # Does not play well with default character module.
 # TODO: Also Use starship vi mode indicators?
-let-env PROMPT_INDICATOR = ""
+$env.PROMPT_INDICATOR = ""
 
-let-env PROMPT_COMMAND = { ||
+$env.PROMPT_COMMAND = { ||
     # jobs are not supported
     let width = (term size).columns
     ^/home/jonsson-nils/.nix-profile/bin/starship prompt $"--cmd-duration=($env.CMD_DURATION_MS)" $"--status=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)"
@@ -15,13 +15,13 @@ let-env PROMPT_COMMAND = { ||
 # Whether we have config items
 let has_config_items = (not ($env | get -i config | is-empty))
 
-let-env config = if $has_config_items {
+$env.config = if $has_config_items {
     $env.config | upsert render_right_prompt_on_last_line true
 } else {
     {render_right_prompt_on_last_line: true}
 }
 
-let-env PROMPT_COMMAND_RIGHT = { ||
+$env.PROMPT_COMMAND_RIGHT = { ||
     let width = (term size).columns
     ^/home/jonsson-nils/.nix-profile/bin/starship prompt --right $"--cmd-duration=($env.CMD_DURATION_MS)" $"--status=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)"
 }

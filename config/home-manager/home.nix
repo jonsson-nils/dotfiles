@@ -101,7 +101,7 @@
     # C compiler
     #gcc
     clang
-    pkgconfig
+    pkg-config
     cmake
 
     # go compiler
@@ -130,7 +130,7 @@
     zip
     unzip
     coreutils-full
-    exa
+    eza
     bat
     ripgrep
     fd
@@ -142,6 +142,9 @@
     bandwhich
     speedtest-cli
     procs
+
+    google-cloud-sdk
+    android-tools
  ];
 }
 
