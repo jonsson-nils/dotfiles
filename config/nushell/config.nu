@@ -91,6 +91,29 @@ module completions {
     --help                                          # Display the help message for this command
   ]
 
+  export extern "git switch" [
+    ...targets: string@"nu-complete git branches"   # name of the branch or files to checkout
+    --conflict: string                              # conflict style (merge or diff3)
+    --detach(-d)                                    # detach HEAD at named commit
+    --force(-f)                                     # force checkout (throw away local modifications)
+    --guess                                         # second guess 'git checkout <no-such-branch>' (default)
+    --track(-t)
+    --no-track
+    --no-guess
+    --merge(-m)                                     # perform a 3-way merge with the new branch
+    --discard-changes
+    --orphan: string                                # new unparented branch
+    --patch(-p)                                     # select hunks interactively
+    --progress                                      # force progress reporting
+    --no-progress
+    --quiet(-q)                                     # suppress progress reporting
+    --recurse-submodules: string                    # control recursive updating of submodules
+    --track(-t)                                     # set upstream info for new branch
+    -c: string                                      # create and checkout a new branch
+    -C: string                                      # create/reset and checkout a branch
+    --help                                          # Display the help message for this command
+  ]
+
   # Push changes
   export extern "git push" [
     remote?: string@"nu-complete git remotes",      # the name of the remote
