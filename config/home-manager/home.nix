@@ -25,6 +25,8 @@
 
     ".config/zellij/config.kdl".source = ~/projects/dotfiles/config/zellij/config.kdl;
 
+    ".config/tmux/tmux.conf".source = ~/projects/dotfiles/config/tmux/tmux.conf;
+
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
     ".config/starship.toml".source = ~/projects/dotfiles/config/starship.toml;
