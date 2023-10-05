@@ -267,6 +267,8 @@ return require('packer').startup(function(use)
     end,
   }
 
+  use 'LhKipp/nvim-nu'
+
   -- todo: checkout these plugins
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   -- https://github.com/desdic/agrolens.nvim
