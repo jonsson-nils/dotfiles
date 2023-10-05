@@ -94,11 +94,11 @@
     openssl
     openssl.dev
     openjdk17-bootstrap
-    nodePackages.pnpm
 
     # node
     nodejs
     deno
+    nodePackages.pnpm
 
     # Rust compiler
     rustup
