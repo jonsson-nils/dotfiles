@@ -124,6 +124,7 @@
     zellij
     mprocs
     broot
+    tmux
     netcat-gnu
 
     # latex
