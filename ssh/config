@@ -1,0 +1,16 @@
+# vim: ft=ssh_config
+
+Host *
+  ServerAliveInterval 120
+  ServerAliveCountMax 2
+
+Match exec "echo %h | grep -q '^.*\.d4s\.tmux$'"
+  User root
+  RequestTTY yes
+  RemoteCommand tmux attach -t main || tmux new -s main || /bin/zsh || /bin/bash || /bin/sh
+  ProxyCommand bash -c "nc $(echo %h | sed 's/\\.d4s\\.tmux$/.day4solutions.com/') %p"
+
+Match exec "echo %h | grep -q '^.*\.d4s$'"
+  User root
+  ProxyCommand bash -c "nc $(echo %h | sed 's/\\.d4s$/.day4solutions.com/') %p"
+
