@@ -75,20 +75,23 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-$env.ANDROID_SDK_ROOT = /home/jonsson-nils/android-sdk
+$env.ANDROID_SDK_ROOT = $"($env.HOME)/android-sdk"
 $env.ANDROID_HOME = $env.ANDROID_SDK_ROOT
+$env.NDK_HOME = $"($env.ANDROID_HOME)/ndk/26.0.10792818"
+$env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
 
-$env.PATH = ($env.PATH | append ~/.cargo/bin)
-$env.PATH = ($env.PATH | append ~/.local/bin)
-$env.PATH = ($env.PATH | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin")
-$env.PATH = ($env.PATH | append $"($env.ANDROID_SDK_ROOT)/platform-tools")
+$env.PATH = ( $env.PATH
+            | append $"($env.HOME)/.cargo/bin"
+            | append $"($env.HOME)/.local/bin"
+            | append $"($env.HOME)/.local/share/pnpm"
+            | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin"
+            | append $"($env.ANDROID_SDK_ROOT)/platform-tools"
+            )
 
 load-env {
   SHELL:  (which nu | get 0 | get path)
   EDITOR: (which nvim | get 0 | get path)
   VISUAL: (which nvim | get 0 | get path)
-# EDITOR: (which hx | get 0 | get path)
-# VISUAL: (which hx | get 0 | get path)
   RUSTC_WRAPPER: (which sccache | get 0 | get path)
 }
 

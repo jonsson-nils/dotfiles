@@ -94,6 +94,7 @@
     openssl
     openssl.dev
     openjdk17-bootstrap
+    nodePackages.pnpm
 
     # node
     nodejs
