@@ -78,7 +78,6 @@ $env.NU_PLUGIN_DIRS = [
 $env.ANDROID_SDK_ROOT = /home/jonsson-nils/android-sdk
 $env.ANDROID_HOME = $env.ANDROID_SDK_ROOT
 
-$env.PATH = ($env.PATH | prepend ~/google-cloud-sdk/bin)
 $env.PATH = ($env.PATH | append ~/.cargo/bin)
 $env.PATH = ($env.PATH | append ~/.local/bin)
 $env.PATH = ($env.PATH | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin")
