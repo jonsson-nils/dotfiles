@@ -28,8 +28,8 @@
   line-numbers = true
 
 [branch]
-  autoSetupMerge = inherit
-  autoSetupRebase = inherit
+  autoSetupMerge = always
+  autoSetupRebase = always
 
 [push]
   default = current
