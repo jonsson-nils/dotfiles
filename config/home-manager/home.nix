@@ -119,7 +119,6 @@
     mongosh
 
     # shell
-    openssh
     nushell
     starship
     zellij
@@ -127,6 +126,7 @@
     broot
     tmux
     netcat-gnu
+    openssh
 
     # latex
     texlive.combined.scheme-full
