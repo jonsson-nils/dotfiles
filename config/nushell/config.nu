@@ -17,7 +17,7 @@ module completions {
   # Download objects and refs from another repository
   export extern "git fetch" [
     repository?: string@"nu-complete git remotes" # name of the repository to fetch
-    branch?: string@"nu-complete git branches" # name of the branch to fetch
+    branch?: string@"nu-complete git branches"    # name of the branch to fetch
     --all                                         # Fetch all remotes
     --append(-a)                                  # Append ref names and object names to .git/FETCH_HEAD
     --atomic                                      # Use an atomic transaction to update local refs.
@@ -142,6 +142,30 @@ module completions {
     --tags                                          # push tags (can't be used with --all or --mirror)
     --thin                                          # use thin pack
     --verbose(-v)                                   # be more verbose
+    --help                                          # Display the help message for this command
+  ]
+
+  export extern "git merge" [
+    branch?: string@"nu-complete git branches"      # name of the branch to fetch
+    --help                                          # Display the help message for this command
+  ]
+
+  export extern "git rebase" [
+    branch?: string@"nu-complete git branches"      # name of the branch to fetch
+    --help                                          # Display the help message for this command
+  ]
+
+  export extern "git status" [
+    --branch
+    --untracked-files
+    --short
+    --long
+    --show-stash
+    --ahead-behind
+    --no-ahead-behind
+    --renames
+    --no-renames
+    --verbose
     --help                                          # Display the help message for this command
   ]
 
