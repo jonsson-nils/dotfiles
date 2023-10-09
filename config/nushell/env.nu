@@ -1,47 +1,6 @@
 # Nushell Environment Config File
 
-# bash env compat
-
-load-env (bash -c '
-if [ -e /home/jonsson-nils/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jonsson-nils/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-. $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-printenv
-' |
- split row "\n" |
- each { split row '=' } |
- each { |it| { $"($it.0)": $"($it.1)" } } |
- reduce { |it,acc| $acc | merge $it } |
- rename -c [PWD pwd]
-)
-
-def create_left_prompt [] {
-    let path_segment = if (is-admin) {
-        $"(ansi red_bold)($env.PWD)"
-    } else {
-        $"(ansi green_bold)($env.PWD)"
-    }
-
-    $path_segment
-}
-
-def create_right_prompt [] {
-    let time_segment = ([
-        (date now | date format '%m/%d/%Y %r')
-    ] | str join)
-
-    $time_segment
-}
-
-# Use nushell functions to define your right and left prompt
-$env.PROMPT_COMMAND = { create_left_prompt }
-$env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
-
-# The prompt indicators are environmental variables that represent
-# the state of the prompt
-$env.PROMPT_INDICATOR = { "〉" }
-$env.PROMPT_INDICATOR_VI_INSERT = { ": " }
-$env.PROMPT_INDICATOR_VI_NORMAL = { "〉" }
-$env.PROMPT_MULTILINE_INDICATOR = { "::: " }
+source '/home/jonsson-nils/.config/nushell/bash-compat.nu'
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
@@ -75,27 +34,26 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-$env.ANDROID_SDK_ROOT = $"($env.HOME)/android-sdk"
-$env.ANDROID_HOME = $env.ANDROID_SDK_ROOT
-$env.NDK_HOME = $"($env.ANDROID_HOME)/ndk/26.0.10792818"
-$env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
+load-env {
+  ANDROID_SDK_ROOT: $"($env.HOME)/android-sdk"
+  ANDROID_HOME: $env.ANDROID_SDK_ROOT
+  NDK_HOME: $"($env.ANDROID_HOME)/ndk/26.0.10792818"
+  PNPM_HOME: $"($env.HOME)/.local/share/pnpm"
+}
 
-$env.PATH = ( $env.PATH
-            | append $"($env.HOME)/.cargo/bin"
-            | append $"($env.HOME)/.local/bin"
-            | append $"($env.HOME)/.local/share/pnpm"
-            | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin"
-            | append $"($env.ANDROID_SDK_ROOT)/platform-tools"
-            )
+$env.PATH = (
+  $env.PATH
+  | append $"($env.HOME)/.cargo/bin"
+  | append $"($env.HOME)/.local/bin"
+  | append $"($env.HOME)/.local/share/pnpm"
+  | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin"
+  | append $"($env.ANDROID_SDK_ROOT)/platform-tools"
+)
 
 load-env {
   SHELL:  (which nu | get 0 | get path)
   EDITOR: (which nvim | get 0 | get path)
   VISUAL: (which nvim | get 0 | get path)
   RUSTC_WRAPPER: (which sccache | get 0 | get path)
-}
-
-def docker-load [name: string, tag: string] {
-  docker tag $"($name):(cat result | docker load | split row ':' | get 2)" $"($name):($tag)"
 }
 

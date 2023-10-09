@@ -29,6 +29,7 @@
 
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
+    ".config/nushell/bash-compat.nu".source = ~/projects/dotfiles/config/nushell/bash-compat.nu;
     ".config/starship.toml".source = ~/projects/dotfiles/config/starship.toml;
     ".cache/starship/init.nu".source = ~/projects/dotfiles/cache/starship/init.nu;
 
