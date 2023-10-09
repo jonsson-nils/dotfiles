@@ -65,7 +65,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
-      #url = "https://github.com/nix-community/neovim-nightly-overlay/archive/a9719c5050b1abbb0adada7dd9f98e0cdbd3ed53.tar.gz";
       url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
     }))
   ];
