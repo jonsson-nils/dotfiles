@@ -15,7 +15,7 @@
   home.file = {
     ".ssh/config".source = ~/projects/dotfiles/ssh/config;
 
-    ".gitconfig".source = ~/projects/dotfiles/gitconfig;
+    ".config/git/config".source = ~/projects/dotfiles/config/git/config;
 
     ".config/nixpkgs/config.nix".source = ~/projects/dotfiles/config/nixpkgs/config.nix;
 

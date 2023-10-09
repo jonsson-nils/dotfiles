@@ -22,10 +22,19 @@
   diffFilter = delta --color-only
 
 [delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  navigate = true
+  light = false
   side-by-side = true
   line-numbers = true
+
+[branch]
+  autoSetupMerge = inherit
+  autoSetupRebase = inherit
+
+[push]
+  default = current
+  autoSetupRemote = true
+  followTags = true
 
 [pull]
   ff = only
