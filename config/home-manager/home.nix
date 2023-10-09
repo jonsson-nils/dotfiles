@@ -23,8 +23,6 @@
 
     ".config/helix/config.toml".source = ~/projects/dotfiles/config/helix/config.toml;
 
-    ".config/zellij/config.kdl".source = ~/projects/dotfiles/config/zellij/config.kdl;
-
     ".config/tmux/tmux.conf".source = ~/projects/dotfiles/config/tmux/tmux.conf;
 
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
@@ -65,12 +63,38 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [
+    # todo: find a better way to integrate the overlay
     (import (builtins.fetchTarball {
       url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
     }))
   ];
 
   home.packages = with pkgs; [
+    # shell
+    nushell
+    starship
+    tmux
+
+    # cli essentials
+    coreutils-full
+    openssh
+    broot
+    netcat-gnu
+    eza
+    bat
+    ripgrep
+    fd
+    sd
+    zip
+    unzip
+
+    # monitoring
+    bottom
+    du-dust
+    bandwhich
+    speedtest-cli
+    procs
+
     # vcs
     gh
     git
@@ -78,19 +102,17 @@
     delta
 
     # editors
-    helix
     neovim
+    helix
 
     # dev environment
-    sccache
     tokei
+    sccache
     hyperfine
     mold
     jq
     yq
     oha
-    openssl
-    openssl.dev
     openjdk17-bootstrap
 
     # node
@@ -102,7 +124,8 @@
     rustup
 
     # C compiler
-    #gcc
+    # todo: find a better workaround for tree-sitter
+    # gcc
     clang
     pkg-config
     cmake
@@ -111,6 +134,7 @@
     go
     libcap
 
+    # lua
     luajitPackages.luarocks-nix
 
     # databases
@@ -118,36 +142,10 @@
     mysql80
     mongosh
 
-    # shell
-    nushell
-    starship
-    zellij
-    mprocs
-    broot
-    tmux
-    netcat-gnu
-    openssh
-
     # latex
     texlive.combined.scheme-full
 
-    # cli essentials
-    zip
-    unzip
-    coreutils-full
-    eza
-    bat
-    ripgrep
-    fd
-    sd
-
-    # monitoring
-    bottom
-    du-dust
-    bandwhich
-    speedtest-cli
-    procs
-
+    # other
     google-cloud-sdk
     android-tools
  ];
