@@ -169,14 +169,21 @@ module completions {
     --help                                          # Display the help message for this command
   ]
 
-  # Apply changes
+  export extern "home-manager help" []
+  export extern "home-manager edit" []
+  export extern "home-manager option" []
+  export extern "home-manager build" []
+  export extern "home-manager init" [
+    --switch
+    directory?: string
+  ]
   export extern "home-manager switch" []
-  # List all the generations
   export extern "home-manager generations" []
-  # Remove a generation
   export extern "home-manager remove-generations" []
-  # Remove all generations after a given timestamp
   export extern "home-manager expire-generations" []
+  export extern "home-manager packages" []
+  export extern "home-manager news" []
+  export extern "home-manager uninstall" []
 }
 
 # Get just the extern definitions without the custom completion commands
@@ -437,7 +444,7 @@ $env.config = {
     case_sensitive: false # set to true to enable case-sensitive completions
     quick: true  # set this to false to prevent auto-selecting completions when only one remains
     partial: true  # set this to false to prevent partial filling of the prompt
-    algorithm: "prefix"  # prefix or fuzzy
+    algorithm: "fuzzy"  # prefix or fuzzy
     external: {
       enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up my be very slow
       max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
