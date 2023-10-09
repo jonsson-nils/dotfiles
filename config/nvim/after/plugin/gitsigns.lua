@@ -23,7 +23,7 @@ require('gitsigns').setup {
     delay = 1000,
     ignore_whitespace = false,
   },
-  show_deleted = true,
+  show_deleted = false,
   current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
   sign_priority = 6,
   update_debounce = 100,
@@ -75,7 +75,7 @@ require('gitsigns').setup {
     --map('n', '<leader>tb', gs.toggle_current_line_blame)
     map('n', '<leader>hd', gs.diffthis)
     map('n', '<leader>hD', function() gs.diffthis('~') end)
-    --map('n', '<leader>td', gs.toggle_deleted)
+    map('n', '<leader>ht', gs.toggle_deleted)
 
     -- Text object
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
