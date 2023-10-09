@@ -1,3 +1,5 @@
+# vim: ft=gitconfig
+
 [user]
 	name = Nils Jonsson
 	email = nils.jonsson@jonsson-analytics.com
