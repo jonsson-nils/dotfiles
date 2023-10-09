@@ -727,5 +727,6 @@ def docker-load [name: string, tag: string] {
   docker tag $"($name):(cat result | docker load | split row ':' | get 2)" $"($name):($tag)"
 }
 
-source ~/.cache/starship/init.nu
+source ~/.config/nushell/starship.nu
+source ~/.config/nushell/zoxide.nu
 

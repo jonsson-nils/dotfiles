@@ -28,8 +28,9 @@
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
     ".config/nushell/bash-compat.nu".source = ~/projects/dotfiles/config/nushell/bash-compat.nu;
+    ".config/nushell/zoxide.nu".source = ~/projects/dotfiles/config/nushell/zoxide.nu;
+    ".config/nushell/starship.nu".source = ~/projects/dotfiles/config/nushell/starship.nu;
     ".config/starship.toml".source = ~/projects/dotfiles/config/starship.toml;
-    ".cache/starship/init.nu".source = ~/projects/dotfiles/cache/starship/init.nu;
 
     ".config/nvim/init.lua".source = ~/projects/dotfiles/config/nvim/init.lua;
     ".config/nvim/lua/user/init.lua".source = ~/projects/dotfiles/config/nvim/lua/user/init.lua;
@@ -78,8 +79,9 @@
     # cli essentials
     coreutils-full
     openssh
+    zoxide
+    fzf
     broot
-    netcat-gnu
     eza
     bat
     ripgrep
@@ -94,6 +96,7 @@
     bandwhich
     speedtest-cli
     procs
+    netcat-gnu
 
     # vcs
     gh
