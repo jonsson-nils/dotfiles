@@ -23,8 +23,6 @@
 
     ".config/helix/config.toml".source = ~/projects/dotfiles/config/helix/config.toml;
 
-    ".config/tmux/tmux.conf".source = ~/projects/dotfiles/config/tmux/tmux.conf;
-
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
     ".config/nushell/bash-compat.nu".source = ~/projects/dotfiles/config/nushell/bash-compat.nu;
@@ -60,6 +58,16 @@
     ".config/nvim/after/plugin/todo-comments.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/todo-comments.lua;
     ".config/nvim/after/plugin/symbols-outline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/symbols-outline.lua;
     ".config/nvim/after/plugin/persistence.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/persistence.lua;
+
+    ".config/tmux/tmux.conf".source = ~/projects/dotfiles/config/tmux/tmux.conf;
+    ".config/tmux/plugins/tpm".source = builtins.fetchGit {
+      url = "https://github.com/tmux-plugins/tpm";
+      ref = "master";
+    };
+    ".other/t-smart-tmux-session-manager".source = builtins.fetchGit {
+      url = "https://github.com/joshmedeski/t-smart-tmux-session-manager";
+      ref = "main";
+    };
   };
 
   nixpkgs.config.allowUnfree = true;

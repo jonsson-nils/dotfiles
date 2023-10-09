@@ -48,6 +48,7 @@ $env.PATH = (
   | append $"($env.HOME)/.local/share/pnpm"
   | append $"($env.ANDROID_SDK_ROOT)/cmdline-tools/bin"
   | append $"($env.ANDROID_SDK_ROOT)/platform-tools"
+  | append $"($env.HOME)/.other/t-smart-tmux-session-manager/bin"
 )
 
 load-env {
