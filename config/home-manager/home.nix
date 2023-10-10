@@ -107,15 +107,15 @@
     procs
     netcat-gnu
 
+    # editors
+    neovim
+    helix
+
     # vcs
     gh
     git
     gitui
     delta
-
-    # editors
-    neovim
-    helix
 
     # dev environment
     tokei
