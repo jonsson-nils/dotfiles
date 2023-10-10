@@ -74,7 +74,8 @@
   nixpkgs.overlays = [
     # todo: find a better way to integrate the overlay
     (import (builtins.fetchTarball {
-      url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+      #url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+      url = "https://api.github.com/repos/nix-community/neovim-nightly-overlay/tarball/2dc429bba6bde69698b5e5fe865b13accc58b88a";
     }))
   ];
 
