@@ -160,6 +160,8 @@
     # other
     google-cloud-sdk
     android-tools
+
+    irssi
  ];
 }
 
