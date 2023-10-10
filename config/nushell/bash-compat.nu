@@ -19,3 +19,18 @@ printenv
 
 load-env $environmentFromBash
 
+load-env { 
+  WIN_PATH: (
+    $env.PATH
+    | split row ":"
+    | where {|it| $it =~ '/mnt/c'}
+    | uniq
+  )
+  PATH: (
+    $env.PATH
+    | split row ":"
+    | where {|it| not $it =~ '/mnt/c'}
+    | uniq
+  )
+}
+
