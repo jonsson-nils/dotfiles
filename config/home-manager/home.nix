@@ -108,6 +108,7 @@
     netcat-gnu
 
     # editors
+    kakoune
     neovim
     helix
 
