@@ -108,9 +108,14 @@
     netcat-gnu
 
     # editors
-    kakoune
     neovim
     helix
+
+    vscode-langservers-extracted
+
+    kakoune
+    kak-lsp
+    file
 
     # vcs
     gh
