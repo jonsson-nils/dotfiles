@@ -1,6 +1,6 @@
 # Nushell Config File
 
-module completions {
+module git_completions {
   # Custom completions for external commands (those outside of Nushell)
   # Each completions has two parts: the form of the external command, including its flags and parameters
   # and a helper command that knows how to complete values for those flags and parameters
@@ -192,6 +192,11 @@ module completions {
     --help                                          # Display the help message for this command
   ]
 
+}
+use git_completions *
+
+#
+module home_manager_completions {
   export extern "home-manager help" []
   export extern "home-manager edit" []
   export extern "home-manager option" []
@@ -208,9 +213,7 @@ module completions {
   export extern "home-manager news" []
   export extern "home-manager uninstall" []
 }
-
-# Get just the extern definitions without the custom completion commands
-use completions *
+use home_manager_completions *
 
 # For more information on themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
