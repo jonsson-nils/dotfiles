@@ -192,6 +192,45 @@ module git_completions {
     --help                                          # Display the help message for this command
   ]
 
+  export extern "git commit" [
+    ...targets: string                              # files to commit
+    --all
+    --reuse-message: string
+    --reedit-message: string
+    --reset-author
+    --short
+    --branch
+    --porcelain
+    --long
+    --null
+    --file:string
+    --author:string
+    --date: string
+    --message: string
+    --template: string
+    --signoff
+    --no-signoff
+    --allow-empty
+    --allow-empty-message
+    --cleanup: string
+    --amend
+    --no-post-rewrite
+    --inclued
+    --only
+    --no-all
+    --patch
+    --interactive
+    --edit
+    --dry-run
+    --status
+    --refresh
+    --no-status
+    --pathspec-from-file: string
+    --pathspec-file-nul
+    --verbose
+    --help                                          # Display the help message for this command
+  ]
+
 }
 use git_completions *
 
