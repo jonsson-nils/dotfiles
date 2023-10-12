@@ -741,15 +741,35 @@ $env.config = {
   ]
 }
 
-alias vim = nvim
-alias vi = nvim
-alias tree = exa -T
-alias cat = bat
-
-def docker-load [name: string, tag: string] {
-  docker tag $"($name):(cat result | docker load | split row ':' | get 2)" $"($name):($tag)"
+def "docker load-result" [name: string, tag: string] {
+  ^docker tag $"($name):(cat result | docker load | split row ':' | get 2)" $"($name):($tag)"
 }
 
 source ~/.config/nushell/starship.nu
 source ~/.config/nushell/zoxide.nu
+
+alias tree = eza -T
+alias cat = bat
+
+def editor [] { ['nvim' 'kak' 'hx'] }
+
+def-env use-editor [
+  editor:string@editor
+] {
+  let ed = (
+    which $editor
+    | get 0
+    | get path
+  )
+  load-env {
+    EDITOR: $ed
+    VISUAL: $ed
+  }
+}
+
+def edit [...args] {
+  nu -c $"($env.EDITOR) ($args)"
+}
+
+use-editor nvim
 
