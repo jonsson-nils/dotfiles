@@ -28,6 +28,8 @@
     ".config/nushell/bash-compat.nu".source = ~/projects/dotfiles/config/nushell/bash-compat.nu;
     ".config/nushell/zoxide.nu".source = ~/projects/dotfiles/config/nushell/zoxide.nu;
     ".config/nushell/starship.nu".source = ~/projects/dotfiles/config/nushell/starship.nu;
+    ".config/nushell/themes/dark.nu".source = ~/projects/dotfiles/config/nushell/themes/dark.nu;
+    ".config/nushell/themes/light.nu".source = ~/projects/dotfiles/config/nushell/themes/light.nu;
     ".config/starship.toml".source = ~/projects/dotfiles/config/starship.toml;
 
     ".config/nvim/init.lua".source = ~/projects/dotfiles/config/nvim/init.lua;
@@ -84,6 +86,7 @@
     nushell
     starship
     tmux
+    carapace
 
     # cli essentials
     coreutils-full
