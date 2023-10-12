@@ -169,6 +169,29 @@ module completions {
     --help                                          # Display the help message for this command
   ]
 
+  export extern "git add" [
+    ...targets: string                              # files to add
+    --all
+    --intent-to-add
+    --no-all
+    --patch
+    --interactive
+    --edit
+    --sparse
+    --force
+    --update
+    --dry-run
+    --refresh
+    --ignore-errors
+    --ignore-missing
+    --no-warn-embedded-repo
+    --renormalize
+    --pathspec-from-file: string
+    --pathspec-file-nul
+    --verbose
+    --help                                          # Display the help message for this command
+  ]
+
   export extern "home-manager help" []
   export extern "home-manager edit" []
   export extern "home-manager option" []
