@@ -13,6 +13,8 @@
   };
 
   home.file = {
+    ".bin/broot-nvim.sh".source = ~/projects/dotfiles/bin/broot-nvim.sh;
+
     ".ssh/config".source = ~/projects/dotfiles/ssh/config;
 
     ".config/git/config".source = ~/projects/dotfiles/config/git/config;

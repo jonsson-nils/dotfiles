@@ -391,8 +391,19 @@ def-env use-editor [
 }
 
 def edit [...args] {
-  nu -c $"($env.EDITOR) ($args)"
+  if (not $env.EDITOR =~ "nvim") {
+    ^nu -c $"($env.EDITOR) ($args)"
+  } else {
+    ^nu -c $"($env.EDITOR) --listen ./.nvim.pipe"
+  }
 }
 
 use-editor nvim
 
+def broot [...args] {
+  if ($env.EDITOR =~ "nvim") {
+    load-env {EDITOR:$"($env.HOME)/.bin/broot-nvim.sh"}
+    print $env.EDITOR
+  }
+  ^broot $args
+}
