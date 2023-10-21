@@ -15,8 +15,8 @@ local on_attach = function(_, bufnr)
   local nopts = { buffer = bufnr, silent = true, noremap = true }
   local iopts = { buffer = bufnr, remap = false }
   vim.keymap.set("n", "gd", function() require('telescope.builtin.__lsp').definitions() end, nopts)
-  vim.keymap.set("n", "gi", function() require('telescope.builtin.__lsp').implementations() end)
-  vim.keymap.set("n", "gr", function() require('telescope.builtin.__lsp').references() end)
+  vim.keymap.set("n", "gi", function() require('telescope.builtin.__lsp').implementations() end, nopts)
+  vim.keymap.set("n", "gr", function() require('telescope.builtin.__lsp').references() end, nopts)
   vim.keymap.set("n", "<leader>.r", function() vim.lsp.buf.rename() end, nopts)
   vim.keymap.set("n", "<leader>.f", function() vim.lsp.buf.format() end)
   vim.keymap.set("n", "<leader>.a", function() vim.lsp.buf.code_action() end)
