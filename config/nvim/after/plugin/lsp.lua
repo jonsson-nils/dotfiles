@@ -12,18 +12,19 @@ lsp.set_preferences({
 })
 
 local on_attach = function(_, bufnr)
-  local opts = { buffer = bufnr, remap = false }
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end)
-  vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end)
-  vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.rename() end, opts)
+  local nopts = { buffer = bufnr, silent = true, noremap = true }
+  local iopts = { buffer = bufnr, remap = false }
+  vim.keymap.set("n", "gd", function() require('telescope.builtin.__lsp').definitions() end, nopts)
+  vim.keymap.set("n", "gi", function() require('telescope.builtin.__lsp').implementations() end)
+  vim.keymap.set("n", "gr", function() require('telescope.builtin.__lsp').references() end)
+  vim.keymap.set("n", "<leader>.r", function() vim.lsp.buf.rename() end, nopts)
   vim.keymap.set("n", "<leader>.f", function() vim.lsp.buf.format() end)
   vim.keymap.set("n", "<leader>.a", function() vim.lsp.buf.code_action() end)
   vim.keymap.set("n", "<leader>.h", function() vim.lsp.buf.hover() end)
-  vim.keymap.set("n", "<leader>s", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "<leader>.s", function() require('telescope.builtin.__lsp').workspace_symbols() end, nopts)
+  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, nopts)
+  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, nopts)
+  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, iopts)
 end
 
 lsp.configure('rust_analyzer', {
@@ -64,7 +65,7 @@ cmp.setup({
     fetching_timeout = 500,
   },
   mapping = {
-    ['<cr>'] = cmp.mapping.confirm({ select = true }),
+    ['<tab>'] = cmp.mapping.confirm({ select = true }),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
