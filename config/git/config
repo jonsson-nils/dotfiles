@@ -27,10 +27,6 @@
   side-by-side = true
   line-numbers = true
 
-[branch]
-  autoSetupMerge = always
-  autoSetupRebase = always
-
 [push]
   default = current
   autoSetupRemote = true
