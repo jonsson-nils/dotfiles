@@ -17,6 +17,8 @@
 
 [core]
   pager = delta
+  untrackedCache = true
+  fsmonitor = true
 
 [interactive]
   diffFilter = delta --color-only
