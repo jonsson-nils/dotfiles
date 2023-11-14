@@ -8,6 +8,10 @@ if [ ! -e './.nvim.pipe' ]; then
   sleep 1
 fi
 
-nvim --server ./.nvim.pipe --remote "$2"
-nvim --server ./.nvim.pipe --remote-send "<C-\\><C-N>$1gg<CR>"
+if [ -z "$2" ]; then
+  nvim --server ./.nvim.pipe --remote "$1"
+else
+  nvim --server ./.nvim.pipe --remote "$2"
+  nvim --server ./.nvim.pipe --remote-send "<C-\\><C-N>$1gg<CR>"
+fi
 
