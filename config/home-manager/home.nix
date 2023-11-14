@@ -169,7 +169,7 @@
     texlive.combined.scheme-full
 
     # other
-    google-cloud-sdk
+    #google-cloud-sdk
     android-tools
 
     irssi

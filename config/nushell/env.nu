@@ -39,6 +39,7 @@ load-env {
 load-env {
   PATH: (
     $env.PATH
+    | append $"($env.HOME)/.local/google-cloud-sdk/bin"
     | append $"($env.HOME)/.cargo/bin"
     | append $"($env.HOME)/.local/bin"
     | append $"($env.HOME)/.local/share/pnpm"
