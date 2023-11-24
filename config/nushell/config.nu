@@ -373,7 +373,7 @@ alias cat = bat
 
 def editor [] { ['nvim' 'kak' 'hx'] }
 
-def-env use-editor [
+def --env use-editor [
   editor:string@editor
 ] {
   let ed = (
