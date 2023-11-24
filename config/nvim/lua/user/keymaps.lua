@@ -31,7 +31,7 @@ vim.keymap.set('n', '<leader>wo', '<C-w>o')
 
 -- buffer managment
 vim.keymap.set('n', '<leader>mq', function()
-  vim.cmd('bdelete  ' .. vim.fn.bufnr())
+  vim.cmd [[bp|sp|bn|bd]]
 end)
 vim.keymap.set('n', '<leader>mw', function()
   vim.cmd [[w]]
