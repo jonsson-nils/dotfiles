@@ -149,10 +149,11 @@
 
     # C compiler
     # todo: find a better workaround for tree-sitter
-    # gcc
+    #gcc
     clang
     pkg-config
     cmake
+    #gnumake
 
     # go compiler
     go
