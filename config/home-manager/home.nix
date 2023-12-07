@@ -126,6 +126,7 @@
     gh
     git
     gitui
+    lazygit
     delta
 
     # dev environment
