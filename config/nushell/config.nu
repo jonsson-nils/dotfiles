@@ -388,7 +388,7 @@ def --env use-editor [
 }
 
 def edit [...args] {
-  if (not $env.EDITOR =~ "nvim") {
+  if (not ($env.EDITOR =~ "nvim")) {
     ^nu -c $"($env.EDITOR) ($args)"
   } else {
     ^nu -c $"($env.EDITOR) --listen ./.nvim.pipe"

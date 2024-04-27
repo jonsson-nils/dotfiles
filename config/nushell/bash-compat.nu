@@ -29,7 +29,7 @@ load-env {
   PATH: (
     $env.PATH
     | split row ":"
-    | where {|it| not $it =~ '/mnt/c'}
+    | where {|it| not ($it =~ '/mnt/c')}
     | uniq
   )
 }
