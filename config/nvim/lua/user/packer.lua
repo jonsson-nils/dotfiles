@@ -91,12 +91,6 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
-  -- TODO: fix me
-  --use {
-    --'akinsho/bufferline.nvim',
-    --tag = '*',
-    --requires = 'nvim-tree/nvim-web-devicons',
-  --}
   use {
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v2.x',

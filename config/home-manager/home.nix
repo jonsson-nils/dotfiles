@@ -39,7 +39,6 @@
     ".config/nvim/lua/user/options.lua".source = ~/projects/dotfiles/config/nvim/lua/user/options.lua;
     ".config/nvim/lua/user/keymaps.lua".source = ~/projects/dotfiles/config/nvim/lua/user/keymaps.lua;
     ".config/nvim/lua/user/packer.lua".source = ~/projects/dotfiles/config/nvim/lua/user/packer.lua;
-    #".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
     ".config/nvim/after/plugin/indent_blankline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/indent_blankline.lua;
     ".config/nvim/after/plugin/leap.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/leap.lua;
     ".config/nvim/after/plugin/which-key.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/which-key.lua;
