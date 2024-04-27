@@ -3,6 +3,17 @@ local ft_to_parser = treesitter.filetype_to_parsername
 
 ft_to_parser.octo = "markdown"
 
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+parser_config.nu = {
+  install_info = {
+    url = "https://github.com/nushell/tree-sitter-nu",
+    files = { "src/parser.c" },
+    branch = "main",
+  },
+  filetype = "nu",
+}
+
 require 'nvim-treesitter.configs'.setup {
   sync_install = false,
   auto_install = true,
