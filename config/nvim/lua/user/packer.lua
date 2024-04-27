@@ -56,7 +56,7 @@ return require('packer').startup(function(use)
   use 'simrat39/symbols-outline.nvim'
   use {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.1',
+    tag = '*',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
@@ -91,11 +91,12 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
-  use {
-    'akinsho/bufferline.nvim',
-    tag = '*',
-    requires = 'nvim-tree/nvim-web-devicons',
-  }
+  -- TODO: fix me
+  --use {
+    --'akinsho/bufferline.nvim',
+    --tag = '*',
+    --requires = 'nvim-tree/nvim-web-devicons',
+  --}
   use {
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v2.x',
@@ -184,76 +185,6 @@ return require('packer').startup(function(use)
     end,
   }
   use {
-    "rest-nvim/rest.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("rest-nvim").setup({
-        -- Open request results in a horizontal split
-        result_split_horizontal = false,
-        -- Keep the http file buffer above|left when split horizontal|vertical
-        result_split_in_place = true,
-        -- Skip SSL verification, useful for unknown certificates
-        skip_ssl_verification = false,
-        -- Encode URL before making request
-        encode_url = true,
-        -- Highlight request on run
-        highlight = {
-          enabled = true,
-          timeout = 150,
-        },
-        result = {
-          -- toggle showing URL, HTTP info, headers at top the of result window
-          show_url = true,
-          show_http_info = true,
-          show_headers = true,
-          -- executables or functions for formatting response body [optional]
-          -- set them to false if you want to disable them
-          formatters = {
-            json = "jq",
-            html = false
-            --html = function(body)
-            --return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
-            --end
-          },
-        },
-        -- Jump to request line on run
-        jump_to_request = false,
-        env_file = '.env',
-        custom_dynamic_variables = {},
-        yank_dry_run = true,
-      })
-      -- todo: configure hotkeys?
-    end
-  }
-  use {
-    "nvim-neotest/neotest",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim",
-      'marilari88/neotest-vitest',
-      'nvim-neotest/neotest-plenary',
-      'rouge8/neotest-rust',
-      'nvim-neotest/neotest-jest',
-    },
-    config = function()
-      require('neotest').setup({
-        adapters = {
-          require('neotest-vitest'),
-          require("neotest-jest"),
-          require("neotest-plenary"),
-          require("neotest-rust"),
-        }
-      })
-    end,
-  }
-  use {
-    'stevearc/overseer.nvim',
-    config = function()
-      require('overseer').setup()
-    end
-  }
-  use {
     "someone-stole-my-name/yaml-companion.nvim",
     requires = {
       { "neovim/nvim-lspconfig" },
@@ -266,8 +197,6 @@ return require('packer').startup(function(use)
       require("lspconfig")["yamlls"].setup(cfg)
     end,
   }
-
-  use 'LhKipp/nvim-nu'
 
   -- todo: checkout these plugins
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects

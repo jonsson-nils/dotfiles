@@ -39,7 +39,7 @@
     ".config/nvim/lua/user/options.lua".source = ~/projects/dotfiles/config/nvim/lua/user/options.lua;
     ".config/nvim/lua/user/keymaps.lua".source = ~/projects/dotfiles/config/nvim/lua/user/keymaps.lua;
     ".config/nvim/lua/user/packer.lua".source = ~/projects/dotfiles/config/nvim/lua/user/packer.lua;
-    ".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
+    #".config/nvim/after/plugin/bufferline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/bufferline.lua;
     ".config/nvim/after/plugin/indent_blankline.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/indent_blankline.lua;
     ".config/nvim/after/plugin/leap.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/leap.lua;
     ".config/nvim/after/plugin/which-key.lua".source = ~/projects/dotfiles/config/nvim/after/plugin/which-key.lua;
@@ -78,12 +78,14 @@
   nixpkgs.overlays = [
     # todo: find a better way to integrate the overlay
     (import (builtins.fetchTarball {
-      #url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-      url = "https://api.github.com/repos/nix-community/neovim-nightly-overlay/tarball/2dc429bba6bde69698b5e5fe865b13accc58b88a";
+      url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+      #url = "https://api.github.com/repos/nix-community/neovim-nightly-overlay/tarball/2dc429bba6bde69698b5e5fe865b13accc58b88a";
     }))
   ];
 
   home.packages = with pkgs; [
+    cachix
+
     # shell
     nushell
     starship
@@ -149,11 +151,11 @@
 
     # C compiler
     # todo: find a better workaround for tree-sitter
-    #gcc
-    clang
+    gcc
+    #clang
     pkg-config
     cmake
-    #gnumake
+    gnumake
 
     # go compiler
     go
