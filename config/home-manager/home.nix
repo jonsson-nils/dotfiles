@@ -140,6 +140,7 @@
     yq
     oha
     openjdk17-bootstrap
+    python3
 
     # node
     nodejs
@@ -151,8 +152,8 @@
 
     # C compiler
     # todo: find a better workaround for tree-sitter
-    gcc
-    #clang
+    #gcc
+    clang
     pkg-config
     cmake
     gnumake
