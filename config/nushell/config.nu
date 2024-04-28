@@ -86,13 +86,6 @@ $env.config = {
     quick: true  # set this to false to prevent auto-selecting completions when only one remains
     partial: true  # set this to false to prevent partial filling of the prompt
     algorithm: "prefix"  # prefix or fuzzy
-    external: {
-      enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up my be very slow
-      max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-      completer: {|spans|
-        ^carapace $spans.0 nushell $spans | from json
-      }
-    }
   }
   filesize: {
     metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
@@ -362,6 +355,7 @@ $env.config = {
 }
 
 use ~/.config/nushell/starship.nu
+source ~/.config/nushell/carapace.nu
 source ~/.config/nushell/zoxide.nu
 
 def "docker load-result" [name: string, tag: string] {
