@@ -1,7 +1,4 @@
 local treesitter = require "nvim-treesitter.parsers"
-local ft_to_parser = treesitter.filetype_to_parsername
-
-ft_to_parser.octo = "markdown"
 
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
