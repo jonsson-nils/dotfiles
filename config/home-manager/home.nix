@@ -40,7 +40,12 @@
     ".config/nvim/lua/config/keymaps.lua".source = ~/projects/dotfiles/config/nvim/lua/config/keymaps.lua;
     ".config/nvim/lua/config/lazy.lua".source = ~/projects/dotfiles/config/nvim/lua/config/lazy.lua;
     ".config/nvim/lua/config/options.lua".source = ~/projects/dotfiles/config/nvim/lua/config/options.lua;
-    ".config/nvim/lua/plugins/example.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/example.lua;
+    ".config/nvim/lua/plugins/disabled.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/disabled.lua;
+    ".config/nvim/lua/plugins/file-browser.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/file-browser.lua;
+    ".config/nvim/lua/plugins/lsp.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/lsp.lua;
+    ".config/nvim/lua/plugins/persistence.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/persistence.lua;
+    ".config/nvim/lua/plugins/tokyonight.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/tokyonight.lua;
+    ".config/nvim/lua/plugins/vim-tmux-navigator.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/vim-tmux-navigator.lua;
 
     ".config/tmux/tmux.conf".source = ~/projects/dotfiles/config/tmux/tmux.conf;
     ".other/t-smart-tmux-session-manager".source = builtins.fetchGit {
@@ -65,6 +70,7 @@
     nushell
     starship
     tmux
+    zellij
     carapace
 
     # cli essentials
