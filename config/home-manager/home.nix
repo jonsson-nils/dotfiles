@@ -24,6 +24,7 @@
     ".cargo/config.toml".source = ~/projects/dotfiles/cargo/config.toml;
 
     ".config/helix/config.toml".source = ~/projects/dotfiles/config/helix/config.toml;
+    ".config/helix/languages.toml".source = ~/projects/dotfiles/config/helix/languages.toml;
 
     ".config/nushell/config.nu".source = ~/projects/dotfiles/config/nushell/config.nu;
     ".config/nushell/env.nu".source = ~/projects/dotfiles/config/nushell/env.nu;
