@@ -43,10 +43,6 @@
     ".config/nvim/lua/plugins/example.lua".source = ~/projects/dotfiles/config/nvim/lua/plugins/example.lua;
 
     ".config/tmux/tmux.conf".source = ~/projects/dotfiles/config/tmux/tmux.conf;
-    ".config/tmux/plugins/tpm".source = builtins.fetchGit {
-      url = "https://github.com/tmux-plugins/tpm";
-      ref = "master";
-    };
     ".other/t-smart-tmux-session-manager".source = builtins.fetchGit {
       url = "https://github.com/joshmedeski/t-smart-tmux-session-manager";
       ref = "main";
